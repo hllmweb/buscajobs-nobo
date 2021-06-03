@@ -49,7 +49,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
+
+
 $route['default_controller'] = 'inicio';
 $route['404_override'] = 'error404';
 $route['translate_uri_dashes'] = FALSE;
-$route['perfil/(:id_usuario)']['INDEX'] = 'perfil/$1';
+
+
+//https://buscajobs.herokuapp.com/perfil/index/5
+$route['perfil/(:any)'] = 'perfil/index/$1';
