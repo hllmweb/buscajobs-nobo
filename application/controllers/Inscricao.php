@@ -30,7 +30,11 @@ class Inscricao extends CI_Controller {
                                               'p_usuario'       => $p_usuario
                                             ));
 
-        echo json_encode($add_inscricao);
+        if($add_inscricao[0]['opcao'] == 1){
+            return 'existe';
+        }else{
+            return 'insert';
+        }
 
         /*
         $data = array(

@@ -68,7 +68,7 @@
                         usuario: usuario
                     },
                     success: function(data){
-                        console.log(data['opcao']);
+                        console.log(data);
                     }
                 })
 
