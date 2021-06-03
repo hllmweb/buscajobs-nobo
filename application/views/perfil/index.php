@@ -38,9 +38,9 @@
         <div class="container">
             <div class="page-container">
                 <span class="font-media-1"><?= $filter_vaga[0]['nm_usuario']; ?></span>
-                <span class="font-small-1"><?= $filter_vaga[0]['nm_profissao']; ?> - <?= $filter_vaga[0]['nivel_experiencia']; ?> -<?= $filter_vaga[0]['nm_cidade']; ?></span>
+                <span class="font-small-1"><?= $filter_vaga[0]['nm_profissao']; ?> - <?= $filter_vaga[0]['nivel_experiencia']; ?> - <?= $filter_vaga[0]['nm_cidade']; ?></span>
 
-                <a href="" class="btn-subscriber">Inscreva-se</a>
+                <a href="javascript:void(0);" class="btn-subscriber" id="add-inscricao" data-usuario="<?= $filter_vaga[0]['id_usuario'] ?>" data-empresa="5">Inscreva-se</a>
             </div>
             <div class="page-description">
                 <p>
@@ -54,5 +54,15 @@
 
     <script src="<?= base_url('assets/js/jquery-3.6.0.min.js'); ?>"></script>
     <script src="<?= base_url('assets/js/script.js'); ?>"></script>
+    <script>
+            $("#add-inscricao").click(function(e){
+                let id_usuario = $(this).data('usuario');
+                let id_empresa = $(this).data('empresa');
+                
+                console.log(id_usuario+" - "+id_empresa);
+
+                e.preventDefault();
+            });
+    </script>
 </body>
 </html>
