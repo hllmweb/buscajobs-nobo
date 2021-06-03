@@ -7,8 +7,8 @@ class Login extends CI_Controller {
 	{
 
 
-		$email = (isset($this->session->userdata('email'))) ? $this->session->userdata('email') : '';
-		$senha = (isset($this->session->userdata('senha'))) ? $this->session->userdata('senha') : '';
+		$email = (isset($this->session->userdata('email')) ? $this->session->userdata('email') : '');
+		$senha = (isset($this->session->userdata('senha')) ? $this->session->userdata('senha') : '');
 
 
 		$data = array(
