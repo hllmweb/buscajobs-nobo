@@ -26,7 +26,7 @@
                 </ul>
                 <div class="menu-line"></div>
                 
-                <?php if(isset($init_session)): ?>
+                <?php if(!isset($init_session)): ?>
                 <div class="menu-featured"><a href="<?= base_url('login'); ?>">Login</a></div>
                 <div class="menu-featured"><a href="<?= base_url('cadastrar'); ?>">Cadastrar</a></div>
                 <?php else: ?>
