@@ -11,6 +11,7 @@ class M_Filter extends CI_Model {
     public function sp_filter($p){
         $params = array(
             array('value' => $p['p_operacao']),
+            array('value' => $p['p_usuario']),
             array('value' => $p['p_cidade']),
             array('value' => $p['p_profissao']),
             array('value' => $p['p_opcao']),
