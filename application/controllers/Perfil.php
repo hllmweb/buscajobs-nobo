@@ -15,9 +15,10 @@ class Perfil extends CI_Controller {
         $this->load->helper(array('form', 'url', 'html', 'directory'));
     }
 
-    public function index($id_usuario)
+    public function index()
     {
-        
+        $id_usuario = $this->input->get_post('id_usuario');
+
         $data = array(
             'titulo' => 'BuscaJobs - Os melhores profissionais, você encontra aqui!',
             'id_usuario' => $id_usuario
