@@ -13,7 +13,7 @@
 	<div class="header">
         <div class="container">
             <div class="logo">
-                <a href="">
+                <a href="<?= base_url(''); ?>">
                     <img src="<?= base_url('assets/img/logo.png'); ?>" alt="Logo Buscajobs" />
                 </a>
             </div>
