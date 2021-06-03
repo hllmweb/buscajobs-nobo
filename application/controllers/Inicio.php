@@ -16,6 +16,9 @@ class Inicio extends CI_Controller {
 	
 	public function index()
 	{
+
+		$p_cidade = $this->input->get_post('cidade');
+		$p_profissao = $this->input->get_post('profissao');
 		
 		$filter_cidade 		= $this->filter->sp_filter(array(
 													  'p_operacao'  => 'FILTER_CIDADE',
@@ -34,8 +37,8 @@ class Inicio extends CI_Controller {
 		$filter_vaga    	= $this->filter->sp_filter(array(
 													  'p_operacao'  => 'FILTER_VAGA',
 													  'p_usuario' 	=> null
-													  'p_cidade'    => null,
-													  'p_profissao' => null,
+													  'p_cidade'    => $p_cidade,
+													  'p_profissao' => $p_profissao,
 													  'p_opcao'     => 0));
 
 
