@@ -2,8 +2,5 @@
 RewriteEngine on
 RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteCond %{SCRIPT_FILENAME} !-d
-
-
-RewriteRule ^perfil/([^/]*)$ perfil.php?id_usuario=$1
 RewriteRule ^(.*)$ index.php/$1 [L]
 </IfModule>
