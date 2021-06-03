@@ -22,6 +22,7 @@ class Submit extends CI_Controller {
 	
 		$filter_vaga    	= $this->filter->sp_filter(array(
 													  'p_operacao'  => 'FILTER_VAGA',
+													  'p_usuario' 	=> null, 
 													  'p_cidade'    => $cidade,
 													  'p_profissao' => $profissao,
 													  'p_opcao'     => 1));
