@@ -37,7 +37,7 @@
     <div class="page">
         <div class="container">
             <div class="page-container">
-                <span class="font-media-1"><?php var_dump($filter_vaga); ?></span>
+                <span class="font-media-1"><?= $filter_vaga[0]['nm_usuario']; ?></span>
                 <span class="font-small-1">{Profissão} - {Cidade}</span>
 
                 <a href="" class="btn-subscriber">Inscreva-se</a>
