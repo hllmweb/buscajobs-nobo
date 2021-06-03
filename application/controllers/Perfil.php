@@ -3,8 +3,8 @@ defined('BASEPATH') OR exit('Não é permitido acesso direto');
 
 class Perfil extends CI_Controller {
 
-    public function __construct(){
-        parent::__construct();
+    public function __construct($id_usuario){
+        parent::__construct($id_usuario);
 
 
         //models
@@ -13,6 +13,16 @@ class Perfil extends CI_Controller {
         //libs
         //$this->load->library(array('session','permissoes'));
         $this->load->helper(array('form', 'url', 'html', 'directory'));
+
+
+
+
+        $data = array(
+            'titulo' => 'BuscaJobs - Os melhores profissionais, você encontra aqui!',
+            'id_usuario' => $id_usuario
+        );
+
+        $this->load->view('perfil/index', $data);
     }
 
     public function index($id_usuario)
