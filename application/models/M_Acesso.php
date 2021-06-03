@@ -14,7 +14,7 @@ class M_Acesso extends CI_Model {
             array('value' => $p['p_senha'])
         );
 
-        $query = $this->db->query("call sp_acesso(?,?)",$params);
+        $query = $this->db->query("call sp_auth(?,?)",$params);
         return $query->result_array();
     }
 
