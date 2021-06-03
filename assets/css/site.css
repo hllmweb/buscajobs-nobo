@@ -545,11 +545,12 @@ select:focus {
     margin: 20px 0;
 }
 .mensagem{
-    font-size: 0.8rem;
+    font-size: 1rem;
     background-color: #cc0000;
+    color: #fff;
     font-weight: 700;
     border-radius: 5px;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     margin: 20px 0;
 }
