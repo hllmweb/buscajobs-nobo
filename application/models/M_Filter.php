@@ -16,7 +16,7 @@ class M_Filter extends CI_Model {
             array('value' => $p['p_opcao']),
         );
 
-        $query = $this->db->query("call sp_filter(?,?,?,?)",$params);
+        $query = $this->db->query("call sp_filter(?,?,?,?,?)",$params);
         mysqli_next_result($this->db->conn_id);
         return $query->result_array();
 
