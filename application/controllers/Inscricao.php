@@ -31,9 +31,9 @@ class Inscricao extends CI_Controller {
                                             ));
 
         if($add_inscricao[0]['opcao'] == 1){
-            return 'existe';
+            echo 'existe';
         }else{
-            return 'insert';
+            echo 'insert';
         }
 
         /*
