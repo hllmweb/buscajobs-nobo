@@ -553,4 +553,5 @@ select:focus {
     text-align: center;
     padding: 10px;
     margin: 20px 0;
+    transition: 0.5s ease-out;
 }
