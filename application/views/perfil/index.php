@@ -67,7 +67,8 @@
                         usuario: usuario
                     },
                     success: function(data){
-                        console.log(data);
+                        let dados = JSON.stringify(data);
+                        console.log(dados);
                     }
                 })
 
