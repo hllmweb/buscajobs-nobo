@@ -28,7 +28,7 @@ class Acesso extends CI_Controller {
                                                 'p_senha'     => $senha
                                             ));
 
-        if(!isset($dados_acesso)){
+        if(isset($dados_acesso)){
             echo "usuário existe";
         }else{
             echo "não existe";
