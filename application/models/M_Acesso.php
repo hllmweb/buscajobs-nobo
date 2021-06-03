@@ -18,9 +18,9 @@ class M_Acesso extends CI_Model {
         // if($query->num_rows())
         // return $query->result_array();
         if($query->num_rows() == 1){
-            return $query->row_array();
+            return $query->result_array();
         }else{
-            return false;
+            return $query->row();
         }
       
     }
