@@ -23,6 +23,8 @@ class Permissoes {
         return $hash_acesso;
     }
 
+
+
     function init_permissao($hash_acesso, $controller){
         $this->CI =& get_instance();
         

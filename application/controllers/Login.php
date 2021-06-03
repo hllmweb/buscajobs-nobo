@@ -3,17 +3,24 @@ defined('BASEPATH') OR exit('Não é permitido acesso direto');
 
 class Login extends CI_Controller {
 
+    public function __construct(){
+        parent::__construct();
+
+        //models
+        // $this->load->model('M_Acesso','acesso');
+        
+        //libs
+        $this->load->library(array('session','permissoes'));
+        $this->load->helper(array('form', 'url', 'html', 'directory'));
+    }
+
+
 	public function index()
 	{
 
-
-		$email = (isset($this->session->userdata('email')) ? $this->session->userdata('email') : '');
-		$senha = (isset($this->session->userdata('senha')) ? $this->session->userdata('senha') : '');
-
-
 		$data = array(
-			'titulo' => 'Login - BuscaJobs',
-			'email'	 => $email
+			'titulo' 		=> 'Login - BuscaJobs',
+			'init_session' 	=>  $this->permissoes->init_session()
 		);
 
 		$this->load->view('login', $data);

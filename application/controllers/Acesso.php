@@ -29,8 +29,7 @@ class Acesso extends CI_Controller {
                                             ));
 
         if(!isset($dados_acesso[0]["mensagem"])):
-            $this->session->set_userdata('email',$dados_acesso[0]['email']);
-            $this->session->set_userdata('senha',$dados_acesso[0]['senha']);
+            $this->session->set_userdata('log_hash_acesso',$dados_acesso[0]['senha']);
             redirect('login', 'refresh');
         else:
             $data = array(
