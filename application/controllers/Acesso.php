@@ -28,7 +28,11 @@ class Acesso extends CI_Controller {
                                                 'p_senha'     => $senha
                                             ));
 
-        print_r($dados_acesso);
+        if(!isset($dados_acesso)){
+            echo "usuário existe";
+        }else{
+            echo "não existe";
+        }
 
         // if(!isset($dados_acesso[0]["mensagem"])):
         //     $this->session->set_userdata('log_hash_acesso',$dados_acesso[0]["hash_acesso"]);
