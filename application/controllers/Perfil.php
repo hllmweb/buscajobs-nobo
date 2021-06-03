@@ -1,6 +1,25 @@
 <?php
 defined('BASEPATH') OR exit('Não é permitido acesso direto');
 
+class Vagas extends CI_Controller {
+
+    public function index()
+    {
+        $id_usuario = $this->input->get_post('id_usuario');
+
+        $data = array(
+            'titulo' => 'BuscaJobs - Os melhores profissionais, você encontra aqui!',
+            'id_usuario' => $id_usuario
+        );
+
+        $this->load->view('perfil/index', $data);
+    }
+}
+
+
+
+/*defined('BASEPATH') OR exit('Não é permitido acesso direto');
+
 class Perfil extends CI_Controller {
     public function __construct(){
         parent::__construct();
@@ -27,4 +46,4 @@ class Perfil extends CI_Controller {
     }
 
 
-}
+}*/
