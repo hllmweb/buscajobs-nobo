@@ -6,7 +6,7 @@ class Login extends CI_Controller {
 	public function index()
 	{
 		$data = array(
-			'titulo' => 'InstaSorte - Login'
+			'titulo' => 'Login - BuscaJobs'
 		);
 
 		$this->load->view('login', $data);

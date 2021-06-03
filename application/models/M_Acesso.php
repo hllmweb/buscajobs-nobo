@@ -8,25 +8,24 @@ class M_Acesso extends CI_Model {
         $this->load->database();
     }
 
-    public function check_acesso($p){
+    public function auth($p){
         $params = array(
-            array('value' => $p['p_cpf']),
             array('value' => $p['p_email']),
             array('value' => $p['p_senha'])
         );
 
-        $query = $this->db->query("call sp_acesso(?,?,?)",$params);
+        $query = $this->db->query("call sp_acesso(?,?)",$params);
         return $query->result_array();
     }
 
-    public function check_permissao($p){
-        $params = array(
-            array('value' => $p['p_hash_acesso']),
-            array('value' => $p['p_controller'])
-        );
+    // public function check_permissao($p){
+    //     $params = array(
+    //         array('value' => $p['p_hash_acesso']),
+    //         array('value' => $p['p_controller'])
+    //     );
 
-        $query = $this->db->query("call sp_permissao(?,?)",$params);
-        return $query->result_array();
-    }
+    //     $query = $this->db->query("call sp_permissao(?,?)",$params);
+    //     return $query->result_array();
+    // }
 
 }

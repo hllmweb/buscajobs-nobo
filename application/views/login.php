@@ -25,6 +25,7 @@
                     <li class="menu-item"><a href="#contato">Contato</a></li>
                 </ul>
                 <div class="menu-line"></div>
+                <div class="menu-featured"><a href="<?= base_url('login'); ?>">Login</a></div>
                 <div class="menu-featured"><a href="<?= base_url('cadastrar'); ?>">Cadastrar</a></div>
             </div>
             <div class="header-group">
@@ -39,15 +40,15 @@
 
    
             <!--form auth-->
-            <form method="POST" id="form-auth">
+            <form method="POST" action="<?= base_url('acesso/index'); ?>" >
             <div class="row block margin-bottom">
                 <div class="flex">
                     <div class="input-container width-50 inline">
-                        <input id="login" name="login"  class="input" type="text" pattern=".+" required />
-                        <label class="label" for="login">Login</label>
+                        <input id="email" name="email"  class="input" type="text" autocomplete="off" pattern=".+" required />
+                        <label class="label" for="email">E-Mail</label>
                     </div>
                     <div class="input-container width-50 inline">
-                        <input id="senha" name="senha"  class="input" type="password" pattern=".+" required />
+                        <input id="senha" name="senha"  class="input" type="password" autocomplete="off" pattern=".+" required />
                         <label class="label" for="senha">Senha</label>
                     </div>    
                 </div>
