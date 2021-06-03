@@ -544,3 +544,12 @@ select:focus {
 .page{
     margin: 20px 0;
 }
+.mensagem{
+    font-size: 2rem;
+    background-color: #cc0000;
+    font-weight: 700;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0;
+}
