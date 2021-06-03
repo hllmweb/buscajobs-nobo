@@ -34,7 +34,7 @@ class Acesso extends CI_Controller {
         //     echo "não existe";
         // }
 
-        var_dump($dados_acesso);
+        // var_dump($dados_acesso);
 
         // if(!isset($dados_acesso[0]["mensagem"])):
         //     $this->session->set_userdata('log_hash_acesso',$dados_acesso[0]["hash_acesso"]);

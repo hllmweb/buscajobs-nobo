@@ -17,12 +17,14 @@ class M_Acesso extends CI_Model {
         $query = $this->db->query("call sp_auth(?,?)",$params);
         // if($query->num_rows())
         // return $query->result_array();
-        if($query->num_rows() == 1){
-            return $query->result_array();
-        }else{
-            return $query->row();
-        }
+        // if($query->num_rows() == 1){
+        //     return $query->result_array();
+        // }else{
+        //     return $query->row();
+        // }
       
+        echo $query->num_rows();
+
     }
 
     // public function check_permissao($p){
