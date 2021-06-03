@@ -25,6 +25,7 @@
                     <li class="menu-item"><a href="#contato">Contato</a></li>
                 </ul>
                 <div class="menu-line"></div>
+                <div class="menu-featured"><a href="<?= base_url('login'); ?>">Login</a></div>
                 <div class="menu-featured"><a href="<?= base_url('cadastrar'); ?>">Cadastrar</a></div>
             </div>
 	        <div class="header-group">
@@ -67,8 +68,7 @@
                         usuario: usuario
                     },
                     success: function(data){
-                        let dados = JSON.stringify(data);
-                        console.log(data.opcao);
+                        console.log(data['opcao']);
                     }
                 })
 
