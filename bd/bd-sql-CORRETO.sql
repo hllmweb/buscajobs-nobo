@@ -46,7 +46,7 @@ insert into usuario (id_cidade, id_profissao, nm_usuario, desc_usuario, nivel_ex
 values (5,15,'Acacio Costa Larga','Fico só de boa!','Avançado','acacio@gmail.com',md5('777'));
 commit;
 
-select * from usuario;
+select nm_usuario from usuario;
 update usuario set id_cidade = 5, id_profissao = 15 where id_usuario = 5
 commit;
 
@@ -64,9 +64,13 @@ create table inscricao(
 	dt_cadastro datetime default CURRENT_TIMESTAMP
 );
 
+drop procedure sp_filter;
+
+#sp filtro
 delimiter //
 create procedure sp_filter(
 	p_operacao varchar(50),
+	p_usuario int,
 	p_cidade int,
 	p_profissao int,
 	p_opcao int
@@ -74,11 +78,11 @@ create procedure sp_filter(
 begin
 	/*
 	 * p_opcao = {
-	 * 	1 = filtro individual	
+	 * 	1 = filtro search 	
 	 * 	0 = listar todos
+	 *  2 = filtro individual
 	 * }
-	 * */
-	
+	 * */	
 	if p_operacao = 'FILTER_CIDADE' then
 
 		select id_cidade, nm_cidade 
@@ -93,14 +97,38 @@ begin
 		join profissao p on p.id_profissao = u.id_profissao 
 		join cidade c on c.id_cidade = u.id_cidade
 		where ((p_opcao = 1) and u.id_cidade = p_cidade and u.id_profissao = p_profissao 
-			or (p_opcao = 0) and u.id_usuario >= 1); 
+			or (p_opcao = 0) and u.id_usuario >= 1
+			or (p_opcao = 2) and u.id_usuario = p_usuario); 
 	end if;
 end;
 //
+call sp_filter('FILTER_VAGA',5,null,null,2); 
+
+
+
+drop procedure sp_inscricao;
+#sp inscricao
+create procedure sp_inscricao(
+	p_operacao varchar(50),
+	p_empresa int,
+	p_usuario int
+)
+begin
+	if p_operacao = 'INSCRICAO' then
+		if exists (select * from inscricao where id_empresa = p_empresa and id_usuario = p_usuario) then
+			select 1 opcao;
+		else
+			insert into inscricao (id_empresa, id_usuario) values (p_empresa, p_usuario);
+		end if;
+	end if;
+end;
 
 commit;
+select * from empresa
+select * from usuario
+select * from inscricao
+call sp_inscricao('INSCRICAO',5,15)
 
-call sp_filter('FILTER_VAGA',1,null,1); 
 
 drop procedure sp_teste;
 commit;
@@ -109,3 +137,38 @@ begin
 	select * from cidade;
 end;
 end
+
+
+
+
+create function slug() returns char(100)
+begin
+	return 'sdasdas';
+end
+
+
+
+
+CREATE FUNCTION spacealphanum( 
+	str TEXT 
+) 
+RETURNS TEXT
+BEGIN 
+  DECLARE i, len SMALLINT DEFAULT 1; 
+  DECLARE ret TEXT DEFAULT ''; 
+  DECLARE c CHAR(1); 
+  SET len = CHAR_LENGTH( str ); 
+  REPEAT 
+    BEGIN 
+      SET c = MID( str, i, 1 ); 
+      IF c REGEXP '[[:alnum:]]' THEN 
+        SET ret=CONCAT(ret,c); 
+      ELSEIF  c = ' ' THEN
+          SET ret=CONCAT(ret," ");
+      END IF; 
+      SET i = i + 1; 
+    END; 
+  UNTIL i > len END REPEAT; 
+  SET ret = lower(ret);
+  RETURN ret; 
+end;

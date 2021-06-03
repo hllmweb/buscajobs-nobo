@@ -36,12 +36,6 @@ class Inscricao extends CI_Controller {
             echo 'insert';
         }
 
-        /*
-        $data = array(
-            'add_inscricao' => $add_inscricao
-        );
-
-        $this->load->view('perfil/index', $data);*/
     }
 }
 

@@ -68,7 +68,11 @@
                         usuario: usuario
                     },
                     success: function(data){
-                        console.log(data);
+                        if(data == "existe"){
+                            alert("Você já enviou uma notificação para o candidato!");
+                        }else if(data == "insert"){
+                            alert("Notificação de interesse enviada!");
+                        }
                     }
                 })
 
