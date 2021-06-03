@@ -22,7 +22,7 @@ class Perfil extends CI_Controller {
 
         $filter_vaga        = $this->filter->sp_filter(array(
                                               'p_operacao'  => 'FILTER_VAGA',
-                                              'p_usuario'   => null,
+                                              'p_usuario'   => $id_usuario,
                                               'p_cidade'    => null,
                                               'p_profissao' => null,
                                               'p_opcao'     => 2));
