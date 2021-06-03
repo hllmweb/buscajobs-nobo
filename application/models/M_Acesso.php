@@ -15,7 +15,9 @@ class M_Acesso extends CI_Model {
         );
 
         $query = $this->db->query("call sp_auth(?,?)",$params);
-        return $query->fetch_assoc();
+        // if($query->num_rows())
+        // return $query->result_array();
+        return $query->num_rows();
     }
 
     // public function check_permissao($p){
