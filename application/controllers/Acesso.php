@@ -28,26 +28,18 @@ class Acesso extends CI_Controller {
                                                 'p_senha'     => $senha
                                             ));
 
-        // if(isset($dados_acesso)){
-        //     echo "usuário existe";
-        // }else{
-        //     echo "não existe";
-        // }
-
-        var_dump($dados_acesso);
-
-        // if(!isset($dados_acesso[0]["mensagem"])):
-        //     $this->session->set_userdata('log_hash_acesso',$dados_acesso[0]["hash_acesso"]);
-        //     $this->session->set_userdata('nome',$dados_acesso[0]['nome']);
-        //     redirect('dashboard', 'refresh');
-        // else:
-        //     $data = array(
-        //         'titulo'    => 'Login - Teste',
-        //         'mensagem'  => $dados_acesso[0]["mensagem"]
-        //     );
-        //     $this->load->view('login',$data);
-        //     //redirect('login','refresh');
-        // endif;
+        if(!isset($dados_acesso[0]["mensagem"])):
+            /*$this->session->set_userdata('email',$dados_acesso[0]['email']);
+            $this->session->set_userdata('senha',$dados_acesso[0]['senha']);
+            redirect('dashboard', 'refresh');*/
+        else:
+            $data = array(
+                'titulo'    => 'Login - BuscaJobs',
+                'mensagem'  => $dados_acesso[0]["mensagem"]
+            );
+            $this->load->view('login',$data);
+            //redirect('login','refresh');
+        endif;
 
     }
     
