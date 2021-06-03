@@ -20,15 +20,15 @@ class Inscricao extends CI_Controller {
     public function add()
     {
 
-        $id_empresa     = $this->input->get_post('id_empresa');
-        $id_usuario     = $this->input->get_post('id_usuario');
+        $p_empresa      = $this->input->get_post('empresa');
+        $p_usuario      = $this->input->get_post('usuario');
         $add_inscricao  = $this->inscricao->sp_inscricao(array(
                                               'p_operacao'      => 'INSCRICAO',
-                                              'p_empresa'       => $id_empresa,
-                                              'p_usuario'       => $id_usuario
+                                              'p_empresa'       => $p_empresa,
+                                              'p_usuario'       => $p_usuario
                                             ));
 
-        echo $add_inscricao;
+        return json_encode($add_inscricao);
 
         /*
         $data = array(

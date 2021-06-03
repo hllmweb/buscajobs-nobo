@@ -56,10 +56,20 @@
     <script src="<?= base_url('assets/js/script.js'); ?>"></script>
     <script>
             $("#add-inscricao").click(function(e){
-                let id_usuario = $(this).data('usuario');
-                let id_empresa = $(this).data('empresa');
+                let usuario = $(this).data('usuario');
+                let empresa = $(this).data('empresa');
                 
-                console.log(id_usuario+" - "+id_empresa);
+                $.ajax({
+                    url: "<?= base_url('inscricao/add'); ?>",
+                    type: "POST",
+                    data: {
+                        empresa: empresa,
+                        usuario: usuario
+                    },
+                    success: function(data){
+                        console.log(data);
+                    }
+                })
 
                 e.preventDefault();
             });

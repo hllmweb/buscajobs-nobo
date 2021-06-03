@@ -82,7 +82,7 @@
     
         <?php foreach($filter_vaga as $row): ?>
         <div class="item">
-            <a href="<?= base_url('perfil').'/'.$row['id_usuario']; ?>">
+            <a href="<?= base_url('vaga').'/'.$row['id_usuario']; ?>">
             <div class="flex">
                 <div class="title width-100 padding text-left">
                     <span class="color-line-1"><?= $row['nm_profissao'].' - '.$row['nm_cidade']; ?></span>
