@@ -38,12 +38,14 @@
         <div class="container">
             <div class="page-container">
                 <span class="font-media-1"><?= $filter_vaga[0]['nm_usuario']; ?></span>
-                <span class="font-small-1">{Profissão} - {Cidade}</span>
+                <span class="font-small-1"><?= $filter_vaga[0]['nm_profissao']; ?> - <?= $filter_vaga[0]['nivel_experiencia']; ?> -<?= $filter_vaga[0]['nm_cidade']; ?></span>
 
                 <a href="" class="btn-subscriber">Inscreva-se</a>
             </div>
             <div class="page-description">
-                <p>Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto</p>
+                <p>
+                    <?= $filter_vaga[0]['desc_usuario']?>
+                </p>
             </div>
 
         </div>
