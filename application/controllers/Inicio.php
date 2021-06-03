@@ -19,18 +19,21 @@ class Inicio extends CI_Controller {
 		
 		$filter_cidade 		= $this->filter->sp_filter(array(
 													  'p_operacao'  => 'FILTER_CIDADE',
+													  'p_usuario' 	=> null,
 													  'p_cidade'	=> null,
 													  'p_profissao' => null,
 													  'p_opcao'		=> null,
 													));
 		$filter_profissao 	= $this->filter->sp_filter(array(
 													  'p_operacao'  => 'FILTER_PROFISSAO',
+													  'p_usuario'   => null,
 													  'p_cidade'	=> null,
 													  'p_profissao' => null,
 													  'p_opcao'		=> null
 													));
 		$filter_vaga    	= $this->filter->sp_filter(array(
 													  'p_operacao'  => 'FILTER_VAGA',
+													  'p_usuario' 	=> null
 													  'p_cidade'    => null,
 													  'p_profissao' => null,
 													  'p_opcao'     => 0));
