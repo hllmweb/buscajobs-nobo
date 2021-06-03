@@ -68,7 +68,7 @@
                     },
                     success: function(data){
                         let dados = JSON.stringify(data);
-                        console.log(dados.opcao);
+                        console.log(data.opcao);
                     }
                 })
 
