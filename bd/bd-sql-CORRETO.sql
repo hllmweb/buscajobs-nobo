@@ -129,38 +129,56 @@ select * from usuario
 select * from inscricao
 call sp_inscricao('INSCRICAO',5,15)
 
-
-
+alter table empresa 
+add hash_acesso varchar(100) not null 
+update empresa set hash_acesso = md5(rand()) where id_usuario = 5
+commit;
 
 drop procedure sp_auth;
 #sp auth
 create procedure sp_auth(
-	#p_operacao varchar(50),
+	p_operacao varchar(100),
 	p_login varchar(100),
-	p_senha varchar(100)
+	p_senha varchar(100),
+	p_hash_acesso varchar(100)
 )
 begin 
 	declare v_opcao varchar(100);
-	
-	if exists (select 1 from empresa where email = p_login and senha = md5(p_senha)) then
-		set v_opcao = 'EMPRESA';
-		if v_opcao = 'EMPRESA' then
-				select v_opcao opcao, e.* from empresa e where email = p_login and senha = md5(p_senha);
-		end if;
-	
-	
-	
-		
-	elseif (select 1 from usuario where email = p_login and senha = md5(p_senha)) then 
-		set v_opcao = 'USUARIO';
-		if v_opcao = 'USUARIO' then
-			select  v_opcao opcao, u.*  from usuario u where email = p_login and senha = md5(p_senha);	
-		end if;
-	else
-		select 'Você não possui cadastro!' mensagem;
-	end if;
+	if p_operacao = 'CHECK_ACESSO' then
+		if exists (select 1 from empresa where email = p_login and senha = md5(p_senha)) then
+			set v_opcao = 'EMPRESA';
+			if v_opcao = 'EMPRESA' then
+					select v_opcao opcao, e.* from empresa e where email = p_login and senha = md5(p_senha);
+			end if;
 
+			
+		elseif (select 1 from usuario where email = p_login and senha = md5(p_senha)) then 
+			set v_opcao = 'USUARIO';
+			if v_opcao = 'USUARIO' then
+				select  v_opcao opcao, u.*  from usuario u where email = p_login and senha = md5(p_senha);	
+			end if;
+		else
+			select 'Você não possui cadastro!' mensagem;
+		end if;
+	elseif p_operacao = 'CHECK_PERMISSAO' then
+		if exists (select 1 from empresa where md5(p_hash_acesso)) then
+			set v_opcao = 'EMPRESA';
+			if v_opcao = 'EMPRESA' then
+					select v_opcao opcao, e.* from empresa e where md5(p_hash_acesso);
+			end if;
+			
+		elseif (select 1 from usuario where md5(p_hash_acesso)) then 
+			set v_opcao = 'USUARIO';
+			if v_opcao = 'USUARIO' then
+				select  v_opcao opcao, u.*  from usuario u where hash_acesso = md5(p_hash_acesso);	
+			end if;
+		else
+			select 'Você não tem permissão!' mensagem;
+		end if;
+	end if;
 end;
+
+
 
 commit;
 select * from  empresa where email = 'hug@gmai.com' and senha = md5('11');
