@@ -15,7 +15,7 @@ class M_Inscricao extends CI_Model {
             array('value' => $p['p_usuario'])
         );
 
-        $query = $this->db->query("call sp_filter(?,?,?)",$params);
+        $query = $this->db->query("call sp_inscricao(?,?,?)",$params);
         mysqli_next_result($this->db->conn_id);
         return $query->result_array();
 
