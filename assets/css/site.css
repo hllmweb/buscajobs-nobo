@@ -636,5 +636,6 @@ select:focus {
     .header-group{
         padding: 20px;
         margin-bottom: 0px;
+        display: block;
     }
 }
