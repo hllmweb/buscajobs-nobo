@@ -385,7 +385,7 @@ html, body{
 }
 .btn-subscriber{
     background-color: transparent;
-    border:2px solid #47cf73;   
+    border:2px solid #68BF10;   
     color: #0a0a0c;
     font-size: 1rem;
     float: right;
@@ -399,9 +399,8 @@ html, body{
     top: -55px;
 }
 .btn-subscriber:hover,
-.btn-subscriber:focus,
-.btn-subscriber:link{
-    background-color: #47cf73;
+.btn-subscriber:focus{
+    background-color: #68BF10 40%;
 }
 .page p{
     font-size: 1rem;
