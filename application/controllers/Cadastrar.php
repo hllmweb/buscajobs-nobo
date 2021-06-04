@@ -33,7 +33,8 @@ class Cadastrar extends CI_Controller {
 		$add_empresa = $this->cadastro->sp_cadastro(array(
 												'p_operacao' 			=> 'ADD_EMPRESA',
 												'p_nm_empresa' 			=> $nm_empresa,
-												'p_email'				=> $senha,
+												'p_email'				=> $email,
+												'p_senha'				=> $senha,
 												'p_id_cidade'			=> null,
 												'p_id_profissao'		=> null,
 												'p_nm_usuario'			=> null,
