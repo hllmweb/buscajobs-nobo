@@ -633,4 +633,8 @@ select:focus {
     .cards > .item{
         margin-bottom: 10px;
     }
+    .header-group{
+        padding: 20px;
+        margin-bottom: 0px;
+    }
 }
