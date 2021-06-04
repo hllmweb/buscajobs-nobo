@@ -653,8 +653,11 @@ select:focus {
     }
     .abrir-menu a{
         font-size: 1rem;
-        color: #FFF;
         font-weight: bold;
+        padding: 10px;
+        background-color: #00BDB1;
+        color: #0B0D36;
+        margin-bottom: 5px;
     }
     .disable{
         display: none;
@@ -677,7 +680,7 @@ select:focus {
     .menu-item a{
         width: 100%;
         display: block;
-        padding: 20px 0;
+        padding: 10px 0;
     }
     .menu-item:first-child{
        border-top: 1px solid #111;
@@ -689,12 +692,11 @@ select:focus {
         display: block;
         width: 100%;
         margin-left: 0px;
-        /*margin: 5px 0;*/
     }
     .menu-featured a{
         width: 100%;
         display: block;
-        padding: 20px 0;
+        padding: 10px 0;
     }
 
 }
