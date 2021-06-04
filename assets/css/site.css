@@ -728,6 +728,7 @@ select:focus {
         width: 100%;
         margin:0px;
         display: block;
+        paddiing: 0;
     }
 
 }
