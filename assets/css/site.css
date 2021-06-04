@@ -600,7 +600,7 @@ select:focus {
         text-align: center;
     }
     .logo{
-        margin: 20px;
+        padding: 20px;
     }
     .menu{
         float: none;
