@@ -703,14 +703,16 @@ select:focus {
     .menu-item:last-child{
         border-bottom:none;
     }
-    .menu-featured{
+    .menu-featured,
+    .menu-acesso-featured{
         display: block;
         width: 100%;
         margin-left: 0px;
         /*border-top: 1px solid #232657;*/
         /*border-bottom: 1px solid #232657;*/
     }
-    .menu-featured a{
+    .menu-featured a,
+    .menu-acesso-featured a{
         width: 100%;
         display: block;
         padding: 10px 0;
@@ -721,6 +723,11 @@ select:focus {
     .menu-form-item:nth-child(1){
         margin-right: 0px;
         margin-bottom: 10px;
+    }
+    .btn-more{
+        width: 100%;
+        margin:0px;
+        display: block;
     }
 
 }
