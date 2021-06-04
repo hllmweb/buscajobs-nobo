@@ -582,3 +582,17 @@ select:focus {
     margin: 20px 0;
     transition: 0.5s ease-out;
 }
+
+
+
+@media only screen and (max-width: 970px){
+    .flex-col{
+        display: flex;
+        flex-flow: column;
+    }
+    .inline, 
+    .width-40{
+        display: block;
+        width: 100%;
+    }
+}
