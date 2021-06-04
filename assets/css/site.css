@@ -698,8 +698,8 @@ select:focus {
         display: block;
         width: 100%;
         margin-left: 0px;
-        border-top: 1px solid #232657;
-        border-bottom: 1px solid #232657;
+        /*border-top: 1px solid #232657;*/
+        /*border-bottom: 1px solid #232657;*/
     }
     .menu-featured a{
         width: 100%;
