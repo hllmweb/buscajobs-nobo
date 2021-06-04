@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('Não é permitido acesso direto');
 
-class Inicio extends CI_Controller {
+class Sobre extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 
