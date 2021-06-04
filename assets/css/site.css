@@ -651,6 +651,10 @@ select:focus {
     .abrir-menu a{
         font-size: 1rem;
         color: #FFF;
+        font-weight: bold;
+    }
+    .menu-main{
+        display: none;
     }
 
 }
