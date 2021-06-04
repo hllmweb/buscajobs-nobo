@@ -589,11 +589,9 @@ select:focus {
     .container{
         width: 100%;
     }
-    .search{
-        padding: 20px;
-    }
     .grid{
         grid-template-columns: 1fr;
+        padding: 20px;
     }
     .flex-col{
         display: flex;
