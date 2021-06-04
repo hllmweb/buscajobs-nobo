@@ -49,11 +49,36 @@
 
             </div>
 	        <div class="header-group">
-	        <h2 class="header-title">Encontre os melhores profissionais</h2>
+	        <h2 class="header-title">Sobre o projeto</h2>
 	        </div>
         </div>
     </div>
 
+
+    <!--page-->
+    <div class="page container">
+        <p>
+            O BuscaJobs é uma website, elaborado pelos acadêmicos: 
+            <ul>
+                <li>Acácio Cortinhas Leal</li>
+                <li>Ajay Ramchandani</li> 
+                <li>Hugo Luis Lima Mesquita</li>
+                <li>Heleniane Medeiros Gama</li>
+                <li>Philip Ricardo dos Santos</li>
+            </ul>
+        </p>
+        
+        <p>
+         Alunos do 8° período do curso de Engenharia da Computação pela Ser Educacional, com a proposta de ser uma solução para pessoas recém-formadas ou que precisam de alguma vaga no mercado de trabalho. 
+        </p>
+
+        <p>O website consiste em as pessoas inserirem suas informações pessoais básicas como nome, e-mail e endereço, além de inserir suas qualificações profissionais como se fosse um currículo, e, através disso, registrar essas informações em um banco de dados. </p>
+
+        <p>Com essas informações inseridas, as empresas podem usufruir do website com intuito de buscar o profissional mais adequado para a vaga e selecioná-lo. A vantagem da elaboração deste website é justamente o fato de que hoje em dias as empresas se baseiam em longos processos seletivos para a contratação, fora que esses processos às vezes são muito custosos tanto para a empresa quanto para o candidato, e além disso, pode fazer com que a empresa contrate um profissional que não era o que se esperava para vaga, ou o candidato acabar se arrependendo da vaga escolhida. </p>
+
+        <p>Com o BuscaJobs, o intuito é justamente deixar claro para as empresas que funcionário eles estão esperando contratar, sem burocracias ou longos processos seletivos e sim a simplicidade e transparência do website .
+        </p>
+    </div>
 
 
 
