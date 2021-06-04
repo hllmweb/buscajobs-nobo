@@ -19,20 +19,21 @@ class Login extends CI_Controller {
 	{
 
 
-		if(!isset($this->session->userdata('log_hash_acesso'))){
+		if(isset($this->session->userdata('log_hash_acesso'))){
 
-		$dados_acesso = $this->acesso->auth(array(
-	                                            'p_operacao'  => 'CHECK_PERMISSAO',
+		$dados_acesso = $this->acesso->auth(array('p_operacao'  => 'CHECK_PERMISSAO',
 	                                            'p_hash_acesso' => $this->session->userdata('log_hash_acesso')       
 	                                        ));
+		}else{
+			redirect("login", "refresh");
 		}
 
-		$data = array(
-			'titulo' 		=> 'Login - BuscaJobs',
-			'lista' 		=>  $dados_acesso
-		);
+		// $data = array(
+		// 	'titulo' 		=> 'Login - BuscaJobs',
+		// 	'lista' 		=>  $dados_acesso
+		// );
 
-		$this->load->view('login', $data);
+		// $this->load->view('login', $data);
 	}
 
     public function sair(){
