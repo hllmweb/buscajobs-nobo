@@ -648,5 +648,9 @@ select:focus {
     .abrir-menu{
         display: block;
     }
+    .abrir-menu a{
+        font-size: 1rem;
+        color: #FFF;
+    }
 
 }
