@@ -161,16 +161,16 @@ begin
 			select 'Você não possui cadastro!' mensagem;
 		end if;
 	elseif p_operacao = 'CHECK_PERMISSAO' then
-		if exists (select 1 from empresa where hash_acesso = md5(p_hash_acesso)) then
+		if exists (select 1 from empresa where hash_acesso = p_hash_acesso) then
 			set v_opcao = 'EMPRESA';
 			if v_opcao = 'EMPRESA' then
-					select v_opcao opcao, e.* from empresa e where e.hash_acesso = md5(p_hash_acesso);
+					select v_opcao opcao, e.* from empresa e where e.hash_acesso = p_hash_acesso;
 			end if;
 			
-		elseif (select 1 from usuario where hash_acesso = md5(p_hash_acesso)) then 
+		elseif (select 1 from usuario where hash_acesso = p_hash_acesso) then 
 			set v_opcao = 'USUARIO';
 			if v_opcao = 'USUARIO' then
-				select  v_opcao opcao, u.*  from usuario u where u.hash_acesso = md5(p_hash_acesso);	
+				select  v_opcao opcao, u.*  from usuario u where u.hash_acesso = p_hash_acesso;	
 			end if;
 		else
 			select 'Você não tem permissão!' mensagem;
@@ -178,19 +178,70 @@ begin
 	end if;
 end;
 
+select * from empresa
+select * from usuario
+drop procedure sp_cadastro;
+#sp cadastro
+create procedure sp_cadastro(
+	p_operacao varchar(100),
+	p_nm_empresa varchar(100),
+	p_email varchar(50),
+	p_senha varchar(50),
+	p_id_cidade int,
+	p_id_profissao int,
+	p_nm_usuario varchar(100),
+	p_desc_usuario text,
+	p_nivel_experiencia text
+)
+begin	
+	if p_operacao = 'ADD_EMPRESA' then
+		insert into empresa (nm_empresa, email, senha, hash_acesso) 
+					 values (p_nm_empresa, p_email, md5(p_senha), md5(p_senha));
+	elseif p_operacao = 'ADD_USUARIO' then
+		insert into usuario (id_cidade, id_profissao, nm_usuario, desc_usuario, nivel_experiencia, email, senha, hash_acesso) 
+					 values (p_id_cidade, p_id_profissao, p_nm_usuario, p_desc_usuario, p_nivel_experiencia, p_email, md5(p_senha), md5(p_senha));
+	end if;
+end;
+
+select * from usuario u 
+#empresa
+call sp_cadastro('ADD_EMPRESA', 'okok LTDA','ok@gmail.com','asdf123',null,null,null,null,null);
+#usuario
+call sp_cadastro('ADD_USUARIO', null, 'usuariook@gmail.com','fdsa321',15,15,'Fulano OK', 'Esse é um teste direto do banco de dados', 'Médio');
+
+commit;
+
+
+
+
+
+
 
 select md5('999')
 commit;
 select * from  empresa where email = 'hug@gmai.com' and senha = md5('11');
 select * from usuario where hash_acesso  = 'e10adc3949ba59abbe56e057f20f883e'
-update usuario set hash_acesso = md5('123456'), senha =  md5('123456')  where id_usuario = 5
+update empresa set hash_acesso = md5('777'), senha =  md5('777')  where id_empresa = 5
 commit;
-
-
-
 
 call sp_auth('CHECK_PERMISSAO',null,null,'123456');
 call sp_auth('CHECK_ACESSO','brasil@gmail.com','123456',null);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 drop procedure sp_teste;
 commit;
 create procedure sp_teste()
@@ -198,6 +249,12 @@ begin
 	select * from cidade;
 end;
 end
+
+
+
+
+
+
 
 
 

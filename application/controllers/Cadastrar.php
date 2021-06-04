@@ -7,7 +7,7 @@ class Cadastrar extends CI_Controller {
 		parent::__construct();
 
 		//models
-		// $this->load->model('M_Filter','filter');
+		$this->load->model('M_Cadastro','cadastro');
 
 		//libs
 		$this->load->library(array('session','permissoes'));
@@ -24,4 +24,26 @@ class Cadastrar extends CI_Controller {
 
 		$this->load->view('cadastrar/index', $data);
 	}
+
+	public function empresa(){
+		$nm_empresa = $this->input->get_post('nm_empresa');
+		$email 		= $this->input->get_post('email_empresa');
+		$senha 		= $this->input->get_post('senha_empresa');
+
+		$add_empresa = $this->cadastro->sp_cadastro(array(
+												'p_operacao' 			=> 'ADD_EMPRESA',
+												'p_nm_empresa' 			=> $nm_empresa,
+												'p_email'				=> $senha,
+												'p_id_cidade'			=> null,
+												'p_id_profissao'		=> null,
+												'p_nm_usuario'			=> null,
+												'p_desc_usuario'    	=> null,
+												'p_nivel_experiencia'  	=> null)); 
+
+		echo $add_empresa;
+
+
+	}
+
+
 }

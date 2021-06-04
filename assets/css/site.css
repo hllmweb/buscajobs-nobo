@@ -97,7 +97,7 @@ html, body{
     display: inline-block;
 }
 .menu-acesso-logoff-featured a{
-    font-size:1rem;
+    font-size:0.9rem;
     background:transparent;
     color:#FFF;
     font-style: normal;

@@ -74,8 +74,8 @@
             </div>
 
 
-            <!--form 1-->
-            <form method="POST" id="form-1" class="tab_contents form-active">
+            <!--form 1 (empresa)-->
+            <form method="POST" action="<?= base_url('cadastrar/empresa'); ?>" id="form-1" class="tab_contents form-active">
             <div class="row block margin-bottom">
                 <div class="flex">
                     <div class="input-container width-100 block">
@@ -108,11 +108,8 @@
 
 
 
-
-
-
-            <!--form 2-->
-            <form method="POST" id="form-2" class="tab_contents">
+            <!--form 2 (usuario)-->
+            <form method="POST" action="<?= base_url('cadastrar/usuario'); ?>" id="form-2" class="tab_contents">
             <div class="row block margin-bottom">
                 <div class="flex">
                     <div class="input-container width-50 inline">
