@@ -34,11 +34,13 @@ class Acesso extends CI_Controller {
         if(!isset($dados_acesso[0]["mensagem"])):
             $this->session->set_userdata('log_hash_acesso',$dados_acesso[0]['hash_acesso']);
 
-            $data = array(
-                'titulo'      => 'Login - BuscaJobs',
-                'lista'       => $this->permissoes->init_permissao($dados[0]['hash_acesso'])
-                //'mensagem'  => $dados_acesso[0]["mensagem"]
-            );
+
+            print_r($dados_acesso[0]['hash_acesso']);
+            // $data = array(
+            //     'titulo'      => 'Login - BuscaJobs',
+            //     'lista'       => $this->permissoes->init_permissao($dados_acesso[0]['hash_acesso'])
+            //     //'mensagem'  => $dados_acesso[0]["mensagem"]
+            // );
 
 
             // $data = array(
@@ -46,7 +48,7 @@ class Acesso extends CI_Controller {
             //     'lista'     => $this->permissoes->init_permissao($this->session->userdata('log_hash_acesso'))
             //     //'mensagem'  => $dados_acesso[0]["mensagem"]
             // );
-            $this->load->view('login',$data);
+            //$this->load->view('login',$data);
 
             //redirect('login', 'refresh');
         // else:
