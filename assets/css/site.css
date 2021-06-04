@@ -671,7 +671,6 @@ select:focus {
     }
     .menu-item{
         display: block;
-        margin: 25px 0;
         border-bottom: 1px solid #0B0D36 40%;
     }
     .menu-item:first-child{
