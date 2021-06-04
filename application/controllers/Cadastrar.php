@@ -43,7 +43,7 @@ class Cadastrar extends CI_Controller {
 												'p_nivel_experiencia'  	=> null)); 
 
 		if($add_empresa){
-			echo "<script>Cadastro efetuado com sucesso!</script>";
+			echo "<script>alert('Cadastro efetuado com sucesso!'); </script>";
 			
    //   		$dados_acesso = $this->acesso->auth(array(
    //                                              'p_operacao'  => 'CHECK_ACESSO',
@@ -60,7 +60,7 @@ class Cadastrar extends CI_Controller {
 			// $this->load->view('inicio/index', $data);
 
 		}else{
-			echo "<script>Erro ao efetuar cadastro!</script>";
+			echo "<script>alert('Erro ao efetuar cadastro!');</script>";
 		}
 
 
