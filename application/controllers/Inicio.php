@@ -46,7 +46,8 @@ class Inicio extends CI_Controller {
 			'titulo'		 	=> 'BuscaJobs - Encontre os melhores profissionais',
 			'filter_cidade'  	=> $filter_cidade,
 			'filter_profissao' 	=> $filter_profissao,
-			'filter_vaga'		=> $filter_vaga
+			'filter_vaga'		=> $filter_vaga,
+			'lista' 			=> $this->permissoes->init_session()
 		);	
 
 		$this->load->view('index', $data);
