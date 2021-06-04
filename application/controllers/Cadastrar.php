@@ -7,6 +7,7 @@ class Cadastrar extends CI_Controller {
 		parent::__construct();
 
 		//models
+		$this->load->model('M_Filter','filter');
 		$this->load->model('M_Acesso','acesso');
 		$this->load->model('M_Cadastro','cadastro');
 
@@ -18,9 +19,27 @@ class Cadastrar extends CI_Controller {
 
 	public function index()
 	{
+
+		$filter_cidade 		= $this->filter->sp_filter(array(
+													  'p_operacao'  => 'FILTER_CIDADE',
+													  'p_usuario' 	=> null,
+													  'p_cidade'	=> null,
+													  'p_profissao' => null,
+													  'p_opcao'		=> null,
+													));
+		$filter_profissao 	= $this->filter->sp_filter(array(
+													  'p_operacao'  => 'FILTER_PROFISSAO',
+													  'p_usuario'   => null,
+													  'p_cidade'	=> null,
+													  'p_profissao' => null,
+													  'p_opcao'		=> null
+													));
+
 		$data = array(
 			'titulo' => 'BuscaJobs - Cadastre-se e encontre os melhores profissionais',
-			'lista'  =>  $this->permissoes->init_permissao($this->session->userdata('log_hash_acesso'))
+			'lista'  =>  $this->permissoes->init_permissao($this->session->userdata('log_hash_acesso')),
+			'filter_cidade'  	=> $filter_cidade,
+			'filter_profissao' 	=> $filter_profissao,
 		);
 
 		$this->load->view('cadastrar/index', $data);

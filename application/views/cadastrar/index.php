@@ -119,9 +119,10 @@
                     <div class="input-container width-25 inline">
                         <div class="select">
                             <select name="cidade" id="cidade" class="select-text" required>
-                                <option value="" selected=""></option>
-                                <option value="Manaus">Manaus</option> 
-                                <option value="Rio de Janeiro">Rio de Janeiro</option> 
+                                <option value="" selected></option>
+                                <?php foreach($filter_cidade as $row): ?>
+                                <option value="<?= $row['id_cidade']; ?>"><?= $row['nm_cidade']; ?></option>
+                                <?php endforeach; ?>      
                             </select>
                             <span class="select-highlight"></span>
                             <span class="select-bar"></span>
@@ -131,9 +132,10 @@
                     <div class="input-container width-25 inline">
                         <div class="select">
                             <select name="profissao" id="profissao" class="select-text" required>
-                                <option value="" selected=""></option>
-                                <option value="Programador PHP">Programador PHP</option> 
-                                <option value="Editor de Vídeo">Editor de Vídeo</option> 
+                                <option value="" selected></option>
+                                <?php foreach($filter_profissao as $row): ?> 
+                                <option value="<?= $row['id_profissao']; ?>"><?= $row['nm_profissao']; ?></option> 
+                                <?php endforeach; ?>
                             </select>
                             <span class="select-highlight"></span>
                             <span class="select-bar"></span>
