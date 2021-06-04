@@ -403,6 +403,10 @@ html, body{
 .btn-subscriber:link{
     background-color: #47cf73;
 }
+.page p{
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
 .page-container{
     padding-top: 15px;
     margin-bottom: 40px;
