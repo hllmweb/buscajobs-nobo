@@ -732,10 +732,13 @@ select:focus {
         margin:0px;
         display: block;
         paddiing: 0;
+        vertical-align: middle;
     }
     .responsive{
         display: inline-block;
-        font-size: 0.8rem;
-        color: #111;
+        font-size: 0.9rem;
+        color: #0B0D36;
+        font-weight: 700;
+        vertical-align: middle;
     }
 }
