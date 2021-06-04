@@ -45,12 +45,13 @@ class Cadastrar extends CI_Controller {
 		if($add_empresa){
 			echo "<script>alert('Cadastro efetuado com sucesso!'); </script>";
 			
-   //   		$dados_acesso = $this->acesso->auth(array(
-   //                                              'p_operacao'  => 'CHECK_ACESSO',
-   //                                              'p_email'     => $email,
-   //                                              'p_senha'     => $senha,
-   //                                              'p_hash_acesso' => null       
-   //                                          ));
+     		$dados_acesso = $this->acesso->auth(array(
+                                                'p_operacao'  => 'CHECK_ACESSO',
+                                                'p_email'     => $email,
+                                                'p_senha'     => $senha,
+                                                'p_hash_acesso' => null       
+                                            ));
+     		print_r($dados_acesso);
 
 			// $data = array(
 			// 	'titulo' => 'BuscaJobs - Encontre os melhores profissionais',
