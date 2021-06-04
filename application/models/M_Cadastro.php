@@ -23,7 +23,7 @@ class M_Cadastro extends CI_Model {
         );
 
         $query = $this->db->query("call sp_cadastro(?,?,?,?,?,?,?,?,?)",$params);
-        return $query->insert_id();
+        return $query->affected_rows();
     }
 
 
