@@ -19,7 +19,7 @@ class Login extends CI_Controller {
 	{
 
 
-		if(empty($this->session->userdata('log_hash_acesso'))){
+		if(!empty($this->session->userdata('log_hash_acesso'))){
 
 			$dados_acesso = $this->acesso->auth(array('p_operacao'  => 'CHECK_PERMISSAO',
 	                                            'p_hash_acesso' => $this->session->userdata('log_hash_acesso')       
