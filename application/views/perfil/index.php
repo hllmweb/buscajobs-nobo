@@ -90,6 +90,9 @@
                         empresa: empresa,
                         usuario: usuario
                     },
+                    beforeSend: function(){
+                        $(this).html('Solicitado Enviada!');
+                    },
                     success: function(data){
                         if(data == "existe"){
                             alert("Você já enviou uma notificação para o candidato!");
