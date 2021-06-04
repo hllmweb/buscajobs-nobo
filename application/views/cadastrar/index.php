@@ -114,7 +114,7 @@
                 <div class="flex">
                     <div class="input-container width-50 inline">
                         <input id="nm_usuario" name="nm_usuario"  class="input" type="text" pattern=".+" required />
-                        <label class="label" for="nm_usuario">Nome Completo</label>
+                        <label class="label" for="nm_usuario">Nome e Sobrenome</label>
                     </div>
                     <div class="input-container width-25 inline">
                         <div class="select">
