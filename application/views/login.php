@@ -25,15 +25,8 @@
                     <li class="menu-item"><a href="#contato">Contato</a></li>
                 </ul>
                 <div class="menu-line"></div>
+                <?php var_dump($lista); ?>
                 
-                <?php if(empty($lista)): ?>
-                <div class="menu-featured"><a href="<?= base_url('login'); ?>">Login</a></div>
-                <div class="menu-featured"><a href="<?= base_url('cadastrar'); ?>">Cadastrar</a></div>
-
-                <?php else: ?>
-                liberado
-                <?php endif; ?>
-
             </div>
             <div class="header-group">
             <h2 class="header-title">Acesso</h2>
