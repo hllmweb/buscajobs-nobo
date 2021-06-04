@@ -30,7 +30,7 @@ class Perfil extends CI_Controller {
         $data = array(
             'titulo'            => 'BuscaJobs - Os melhores profissionais, você encontra aqui!',
             'filter_vaga'       => $filter_vaga,
-            'lista'             =>  $this->permissoes->init_permissao($this->session->userdata('log_hash_acesso'))
+            'lista'             => $this->permissoes->init_permissao($this->session->userdata('log_hash_acesso'))
         );
 
         $this->load->view('perfil/index', $data);

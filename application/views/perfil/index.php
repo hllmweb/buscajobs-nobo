@@ -54,8 +54,8 @@
             <div class="page-container">
                 <span class="font-media-1"><?= $filter_vaga[0]['nm_usuario']; ?></span>
                 <span class="font-small-1"><?= $filter_vaga[0]['nm_profissao']; ?> - <?= $filter_vaga[0]['nivel_experiencia']; ?> - <?= $filter_vaga[0]['nm_cidade']; ?></span>
-
-                <?php if($lista[0]['opcao'] == 'EMPRESA'): ?>
+        
+                <?php if($lista !== false && $lista[0]['opcao'] == 'EMPRESA'): ?>
                 <a href="javascript:void(0);" class="btn-subscriber" id="add-inscricao" data-usuario="<?= $filter_vaga[0]['id_usuario'] ?>" data-empresa="5">Inscreva-se</a>
                 <?php endif; ?>
             </div>

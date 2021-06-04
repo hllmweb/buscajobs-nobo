@@ -19,7 +19,7 @@ class Cadastrar extends CI_Controller {
 	{
 		$data = array(
 			'titulo' => 'BuscaJobs - Cadastre-se e encontre os melhores profissionais',
-			'lista' 			=>  $this->permissoes->init_permissao($this->session->userdata('log_hash_acesso'))
+			'lista'  =>  $this->permissoes->init_permissao($this->session->userdata('log_hash_acesso'))
 		);
 
 		$this->load->view('cadastrar/index', $data);
