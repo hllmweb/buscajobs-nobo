@@ -17,10 +17,15 @@ class Permissoes {
         $this->CI = & get_instance();
        
         $hash_acesso = $this->CI->session->userdata('log_hash_acesso');
-        if(!isset($hash_acesso)):
+        /*if(!isset($hash_acesso)):
             redirect("login","refresh");
+        endif;*/
+
+        if(!isset($hash_acesso)):
+            return false;
+        else: 
+            return $hash_acesso;
         endif;
-        return $hash_acesso;
     }
 
 

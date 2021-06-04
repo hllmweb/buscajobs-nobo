@@ -36,7 +36,7 @@ class Acesso extends CI_Controller {
         else:
             $data = array(
                 'titulo'    => 'Login - BuscaJobs',
-                'lista'         => $this->permissoes->init_permissao($this->session->userdata('log_hash_acesso')),
+                'lista'     => $this->permissoes->init_session(), // nao existe
                 'mensagem'  => $dados_acesso[0]["mensagem"]
             );
             $this->load->view('login',$data);
