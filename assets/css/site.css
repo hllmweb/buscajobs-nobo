@@ -658,6 +658,8 @@ select:focus {
         background-color: #00BDB1;
         color: #0B0D36;
         margin-bottom: 5px;
+        width: 100%;
+        display: block;
     }
     .disable{
         display: none;
@@ -674,7 +676,7 @@ select:focus {
     }
     .menu-item{
         display: block;
-        border-bottom: 1px solid #111;
+        border-bottom: 1px solid #0c0e39;
         margin: 0px;
     }
     .menu-item a{
@@ -683,7 +685,7 @@ select:focus {
         padding: 10px 0;
     }
     .menu-item:first-child{
-       border-top: 1px solid #111;
+       border-top: 1px solid #0c0e39;
     }
     .menu-item:last-child{
         border-bottom:none;
@@ -692,6 +694,8 @@ select:focus {
         display: block;
         width: 100%;
         margin-left: 0px;
+        border-top: 1px solid #232657;
+        border-bottom: 1px solid #232657;
     }
     .menu-featured a{
         width: 100%;
