@@ -47,7 +47,7 @@ class Inicio extends CI_Controller {
 			'filter_cidade'  	=> $filter_cidade,
 			'filter_profissao' 	=> $filter_profissao,
 			'filter_vaga'		=> $filter_vaga,
-			'lista' 			=> $this->permissoes->init_session()
+			'lista' 			=>  $this->permissoes->init_permissao($this->session->userdata('log_hash_acesso'))
 		);	
 
 		$this->load->view('index', $data);
