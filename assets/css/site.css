@@ -713,5 +713,8 @@ select:focus {
         display: block;
         padding: 10px 0;
     }
+    .row{
+        padding: 0 20px;
+    }
 
 }
