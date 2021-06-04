@@ -659,5 +659,16 @@ select:focus {
     .enable{
         display: block;
     }
+    .menu-list{
+        width: 100%;
+        display: block;
+    }
+    .menu-line{
+        display: none;
+    }
+    .menu-item{
+        display: block;
+        margin: 25px 0;
+    }
 
 }
