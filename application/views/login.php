@@ -55,7 +55,7 @@
             <!--form auth-->
             <form method="POST" action="<?= base_url('acesso/index'); ?>" >
             <div class="row block margin-bottom">
-                
+                <?= (isset($mensagem)) ? '<div class="row mensagem">ATENÇÃO: '.$mensagem.'</div>' : ''; ?>
                 <div class="flex">
                     <div class="input-container width-50 inline">
                         <input id="email" name="email"  class="input" type="text" autocomplete="off" pattern=".+" required />
