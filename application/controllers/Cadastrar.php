@@ -54,13 +54,13 @@ class Cadastrar extends CI_Controller {
 
 			$data = array(
 				'titulo' => 'BuscaJobs - Encontre os melhores profissionais',
-				'lista' 			=>  $this->permissoes->init_permissao($dados_acesso[0]['hash_acesso'])
+				'lista'  =>  $this->permissoes->init_permissao($dados_acesso[0]['hash_acesso'])
 			);
 
 			$this->load->view('inicio/index', $data);
 
 		}else{
-			echo "<script>Erro ao efetuar cadastro!</script>"
+			echo "<script>Erro ao efetuar cadastro!</script>";
 		}
 
 
