@@ -49,7 +49,7 @@ class Acesso extends CI_Controller {
             // );
             //$this->load->view('login',$data);
 
-            redirect('login', 'refresh');
+            redirect('inicio', 'refresh');
         else:
             //$this->permissoes->init_session(), // nao existe
             //redirect('login','refresh');
