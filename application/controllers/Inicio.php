@@ -9,7 +9,7 @@ class Inicio extends CI_Controller {
 		$this->load->model('M_Filter','filter');
 
 		//libs
-		//$this->load->library(array('session','permissoes'));
+		$this->load->library(array('session','permissoes'));
 		$this->load->helper(array('form', 'url', 'html', 'directory','file'));
 
 	}
