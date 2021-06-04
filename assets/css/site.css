@@ -95,12 +95,11 @@ html, body{
 }
 .menu-acesso-logoff-featured{
     display: inline-block;
-    margin-left:10px;
 }
 .menu-acesso-logoff-featured a{
-    font-size:0.9rem;
+    font-size:1rem;
     background:transparent;
-    color:#cc0000;
+    color:#FFF;
     font-style: normal;
     font-weight: bold;
     padding:15px 25px;
