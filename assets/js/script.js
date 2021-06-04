@@ -20,3 +20,18 @@ $(".menu-form-item a").click(function(e){
 
 
 
+$(".abrir-menu").click(function(e){
+	$(".menu ul").toggleClass('aberto');
+
+	if($(".menu ul").hasClass('aberto')){
+		$(".abrir-menu a").html("FECHAR MENU");
+	}else{
+		$(".abrir-menu a").html("ABRIR MENU");
+	}
+
+	$(".menu ul li").each(function(i, e){
+		$(e).show();
+	});
+
+	//$(".menu-atual").removeClass('menu-atual');
+});
