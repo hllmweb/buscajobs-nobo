@@ -653,8 +653,11 @@ select:focus {
         color: #FFF;
         font-weight: bold;
     }
-    .menu-main{
+    .disable{
         display: none;
+    }
+    .enable{
+        display: block;
     }
 
 }
