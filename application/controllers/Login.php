@@ -24,13 +24,15 @@ class Login extends CI_Controller {
 			$dados_acesso = $this->acesso->auth(array('p_operacao'  => 'CHECK_PERMISSAO',
 	                                            'p_hash_acesso' => $this->session->userdata('log_hash_acesso')       
 	                                        ));
+		
+				$data = array(
+					'titulo' 		=> 'Login - BuscaJobs',
+					'lista' 		=>  $dados_acesso
+				);
+
 		}
 
-		$data = array(
-			'titulo' 		=> 'Login - BuscaJobs',
-			'lista' 		=>  $dados_acesso
-		);
-
+	
 		$this->load->view('login', $data);
 	}
 
