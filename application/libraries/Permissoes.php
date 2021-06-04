@@ -37,7 +37,7 @@ class Permissoes {
 
         $dados_acesso        = $this->CI->acesso->auth($params);
         if(!isset($dados_acesso[0]["mensagem"])):
-            return $dados_acesso;
+            return false;
         else:
             return $dados_acesso;
             //$this->CI->session->set_userdata('mensagem',$dados_acesso[0]["mensagem"]);
