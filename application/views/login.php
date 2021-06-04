@@ -26,7 +26,7 @@
                 </ul>
                 <div class="menu-line"></div>
                 
-                <?php if(!isset($lista)): ?>
+                <?php if(isset($lista)): ?>
                 <div class="menu-featured"><a href="<?= base_url('login'); ?>">Login</a></div>
                 <div class="menu-featured"><a href="<?= base_url('cadastrar'); ?>">Cadastrar</a></div>
 
