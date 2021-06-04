@@ -19,15 +19,15 @@ class Login extends CI_Controller {
 	{
 
 
-		if(!isset(empty($this->session->userdata('log_hash_acesso')))){
-			echo "nao existe";
+		// if(!isset(empty($this->session->userdata('log_hash_acesso')))){
+		// 	echo "nao existe";
 
-			// $dados_acesso = $this->acesso->auth(array('p_operacao'  => 'CHECK_PERMISSAO',
-	  //                                           'p_hash_acesso' => $this->session->userdata('log_hash_acesso')       
-	  //                                       ));
+		// 	// $dados_acesso = $this->acesso->auth(array('p_operacao'  => 'CHECK_PERMISSAO',
+	 //  //                                           'p_hash_acesso' => $this->session->userdata('log_hash_acesso')       
+	 //  //                                       ));
 		
 
-		}
+		// }
 
 		
 		$data = array(

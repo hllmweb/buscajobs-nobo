@@ -25,15 +25,14 @@ class Permissoes {
 
 
 
-    function init_permissao($hash_acesso, $controller){
+    function init_permissao($hash_acesso){
         $this->CI =& get_instance();
         
         $params = array(
-            'p_hash_acesso' => $hash_acesso,
-            'p_controller'  => $controller
+            'p_hash_acesso' => $hash_acesso
         );
 
-        $dados_acesso        = $this->CI->acesso->check_permissao($params);
+        $dados_acesso        = $this->CI->acesso->auth($params);
         if(!isset($dados_acesso[0]["mensagem"])):
             return $dados_acesso;
         else:
