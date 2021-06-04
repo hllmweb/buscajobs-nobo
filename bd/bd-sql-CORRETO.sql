@@ -148,29 +148,29 @@ begin
 		if exists (select 1 from empresa where email = p_login and senha = md5(p_senha)) then
 			set v_opcao = 'EMPRESA';
 			if v_opcao = 'EMPRESA' then
-					select v_opcao opcao, e.* from empresa e where email = p_login and senha = md5(p_senha);
+					select v_opcao opcao, e.* from empresa e where e.email = p_login and senha = md5(p_senha);
 			end if;
 
 			
 		elseif (select 1 from usuario where email = p_login and senha = md5(p_senha)) then 
 			set v_opcao = 'USUARIO';
 			if v_opcao = 'USUARIO' then
-				select  v_opcao opcao, u.*  from usuario u where email = p_login and senha = md5(p_senha);	
+				select  v_opcao opcao, u.*  from usuario u where u.email = p_login and senha = md5(p_senha);	
 			end if;
 		else
 			select 'Você não possui cadastro!' mensagem;
 		end if;
 	elseif p_operacao = 'CHECK_PERMISSAO' then
-		if exists (select 1 from empresa where md5(p_hash_acesso)) then
+		if exists (select 1 from empresa where hash_acesso = md5(p_hash_acesso)) then
 			set v_opcao = 'EMPRESA';
 			if v_opcao = 'EMPRESA' then
-					select v_opcao opcao, e.* from empresa e where md5(p_hash_acesso);
+					select v_opcao opcao, e.* from empresa e where e.hash_acesso = md5(p_hash_acesso);
 			end if;
 			
-		elseif (select 1 from usuario where md5(p_hash_acesso)) then 
+		elseif (select 1 from usuario where hash_acesso = md5(p_hash_acesso)) then 
 			set v_opcao = 'USUARIO';
 			if v_opcao = 'USUARIO' then
-				select  v_opcao opcao, u.*  from usuario u where hash_acesso = md5(p_hash_acesso);	
+				select  v_opcao opcao, u.*  from usuario u where u.hash_acesso = md5(p_hash_acesso);	
 			end if;
 		else
 			select 'Você não tem permissão!' mensagem;
@@ -179,15 +179,18 @@ begin
 end;
 
 
-
+select md5('999')
 commit;
 select * from  empresa where email = 'hug@gmai.com' and senha = md5('11');
-select * from usuario
-update usuario set senha = md5('123') where id_usuario = 5
+select * from usuario where hash_acesso  = 'e10adc3949ba59abbe56e057f20f883e'
+update usuario set hash_acesso = md5('123456'), senha =  md5('123456')  where id_usuario = 5
+commit;
 
 
-call sp_auth('joao@gmail.com','123');
-call sp_auth('abc_brasil@gmail.com','123');
+
+
+call sp_auth('CHECK_PERMISSAO',null,null,'123456');
+call sp_auth('CHECK_ACESSO','brasil@gmail.com','123456',null);
 drop procedure sp_teste;
 commit;
 create procedure sp_teste()

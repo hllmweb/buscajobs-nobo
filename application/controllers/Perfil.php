@@ -28,8 +28,8 @@ class Perfil extends CI_Controller {
                                               'p_opcao'     => 2));
 
         $data = array(
-            'titulo' => 'BuscaJobs - Os melhores profissionais, você encontra aqui!',
-            'filter_vaga' => $filter_vaga,
+            'titulo'            => 'BuscaJobs - Os melhores profissionais, você encontra aqui!',
+            'filter_vaga'       => $filter_vaga,
             'lista'             =>  $this->permissoes->init_permissao($this->session->userdata('log_hash_acesso'))
         );
 
