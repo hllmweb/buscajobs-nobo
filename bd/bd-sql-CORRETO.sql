@@ -204,6 +204,7 @@ begin
 end;
 
 select * from usuario u 
+select * from empresa e 
 #empresa
 call sp_cadastro('ADD_EMPRESA', 'okok LTDA','ok@gmail.com','asdf123',null,null,null,null,null);
 #usuario
