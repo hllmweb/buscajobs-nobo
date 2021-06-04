@@ -33,9 +33,9 @@
                
 
                 <?php if($lista[0]['opcao'] == 'EMPRESA'): ?>
-                <?= $lista[0]['nm_empresa']; ?>
+                <div class="menu-acesso-featured"><a href=""><?= $lista[0]['nm_empresa']; ?></a></div>
                 <?php elseif($lista[0]['opcao'] == 'USUARIO'): ?>
-                <?= $lista[0]['nm_usuario']; ?>
+                <div class="menu-acesso-featured"><a href=""><?= $lista[0]['nm_usuario']; ?></a></div>
                 <?php endif; ?>
 
                 <?php endif; ?>
