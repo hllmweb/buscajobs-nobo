@@ -672,6 +672,7 @@ select:focus {
     .menu-item{
         display: block;
         border-bottom: 1px solid #111;
+        margin: 0px;
     }
     .menu-item a{
         width: 100%;
