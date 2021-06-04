@@ -586,6 +586,9 @@ select:focus {
 
 
 @media only screen and (max-width: 970px){
+    .header{
+        height: auto;
+    }
     .container,
     .logo,
     .menu{
