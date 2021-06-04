@@ -716,5 +716,9 @@ select:focus {
     .row{
         padding: 0 20px;
     }
+    .menu-form-item:nth-child(1){
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
 
 }
