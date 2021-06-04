@@ -590,6 +590,9 @@ select:focus {
 .abrir-menu{
     display:none;
 }
+.responsive{
+    display: none;
+}
 
 @media only screen and (max-width: 970px){
     .nao-responsivo{
@@ -730,5 +733,9 @@ select:focus {
         display: block;
         paddiing: 0;
     }
-
+    .responsive{
+        display: inline-block;
+        font-size: 0.8rem;
+        color: #111;
+    }
 }
