@@ -7,7 +7,7 @@ class Login extends CI_Controller {
         parent::__construct();
 
         //models
-        // $this->load->model('M_Acesso','acesso');
+        $this->load->model('M_Acesso','acesso');
         
         //libs
         $this->load->library(array('session','permissoes'));
@@ -24,16 +24,14 @@ class Login extends CI_Controller {
 		$dados_acesso = $this->acesso->auth(array('p_operacao'  => 'CHECK_PERMISSAO',
 	                                            'p_hash_acesso' => $this->session->userdata('log_hash_acesso')       
 	                                        ));
-		}else{
-			redirect("login", "refresh");
 		}
 
-		// $data = array(
-		// 	'titulo' 		=> 'Login - BuscaJobs',
-		// 	'lista' 		=>  $dados_acesso
-		// );
+		$data = array(
+			'titulo' 		=> 'Login - BuscaJobs',
+			'lista' 		=>  $dados_acesso
+		);
 
-		// $this->load->view('login', $data);
+		$this->load->view('login', $data);
 	}
 
     public function sair(){
