@@ -7,6 +7,7 @@ class Cadastrar extends CI_Controller {
 		parent::__construct();
 
 		//models
+		$this->load->model('M_Acesso','acesso');
 		$this->load->model('M_Cadastro','cadastro');
 
 		//libs
@@ -41,7 +42,26 @@ class Cadastrar extends CI_Controller {
 												'p_desc_usuario'    	=> null,
 												'p_nivel_experiencia'  	=> null)); 
 
-		echo $add_empresa;
+		if($add_empresa){
+			echo "<script>Cadastro efetuado com sucesso!</script>";
+			
+     		$dados_acesso = $this->acesso->auth(array(
+                                                'p_operacao'  => 'CHECK_ACESSO',
+                                                'p_email'     => $email,
+                                                'p_senha'     => $senha,
+                                                'p_hash_acesso' => null       
+                                            ));
+
+			$data = array(
+				'titulo' => 'BuscaJobs - Encontre os melhores profissionais',
+				'lista' 			=>  $this->permissoes->init_permissao($this->session->userdata('log_hash_acesso'))
+			);
+			
+			$this->load->view('inicio/index', $data);
+
+		}else{
+			echo "<script>Erro ao efetuar cadastro!</script>"
+		}
 
 
 	}

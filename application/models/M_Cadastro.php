@@ -23,11 +23,7 @@ class M_Cadastro extends CI_Model {
         );
 
         $query = $this->db->query("call sp_cadastro(?,?,?,?,?,?,?,?,?)",$params);
-        if($query){
-            return true;
-        }else{
-            return false;
-        }
+        return $query;
     }
 
 
