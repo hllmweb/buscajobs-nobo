@@ -408,11 +408,13 @@ html, body{
     margin-bottom: 10px;
 }
 .page-list{
-    margin: 0 10px;
+    list-style-type: circle;
+    margin: 0 20px;
     font-size: 1rem;
 }
 .page-list li{
     display: block;
+    padding: 5px 0;
 }
 .page-container{
     padding-top: 15px;
