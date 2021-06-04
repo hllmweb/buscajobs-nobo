@@ -109,7 +109,7 @@
                     <span class="color-line-1"><?= $row['nm_profissao'].' - '.$row['nm_cidade']; ?></span>
                     <div class="description"><?= $row['nm_usuario']; ?></div>
                 </div>
-                <button class="btn-more"><span class="responsive">Visualizar</span>
+                <button class="btn-more"><span class="responsive">Visualizar Perfil</span>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="36px" width="36px" role="img" aria-hidden="true"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path></svg>
                 </button>
             </div>

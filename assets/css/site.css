@@ -707,7 +707,8 @@ select:focus {
         border-bottom:none;
     }
     .menu-featured,
-    .menu-acesso-featured{
+    .menu-acesso-featured,
+    .menu-acesso-logoff-featured{
         display: block;
         width: 100%;
         margin-left: 0px;
@@ -715,7 +716,8 @@ select:focus {
         /*border-bottom: 1px solid #232657;*/
     }
     .menu-featured a,
-    .menu-acesso-featured a{
+    .menu-acesso-featured a,
+    .menu-acesso-logoff-featured a{
         width: 100%;
         display: block;
         padding: 10px 0;
