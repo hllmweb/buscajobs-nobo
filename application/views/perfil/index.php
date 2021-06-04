@@ -34,8 +34,10 @@
 
                 <?php if($lista[0]['opcao'] == 'EMPRESA'): ?>
                 <div class="menu-acesso-featured"><a href=""><?= $lista[0]['nm_empresa']; ?></a></div>
+                <div class="menu-acesso-logoff-featured"><a href="<?= base_url('login/sair'); ?>">Sair</a></div>
                 <?php elseif($lista[0]['opcao'] == 'USUARIO'): ?>
                 <div class="menu-acesso-featured"><a href=""><?= $lista[0]['nm_usuario']; ?></a></div>
+                <div class="menu-acesso-logoff-featured"><a href="<?= base_url('login/sair'); ?>">Sair</a></div>
                 <?php endif; ?>
 
                 <?php endif; ?>
