@@ -9,7 +9,7 @@ class Acesso extends CI_Controller {
         $this->load->model('M_Acesso','acesso');
         
         //libs
-        $this->load->library(array('session'));
+        $this->load->library(array('session','permissoes'));
         $this->load->helper(array('form', 'url', 'html', 'directory'));
     }
     
