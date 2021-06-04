@@ -93,7 +93,20 @@ html, body{
     text-decoration: none;
     border-radius:10px;
 }
-
+.menu-acesso-logoff-featured{
+    display: inline-block;
+    margin-left:10px;
+}
+.menu-acesso-logoff-featured a{
+    font-size:0.9rem;
+    background:transparent;
+    color:#cc0000;
+    font-style: normal;
+    font-weight: bold;
+    padding:15px 25px;
+    text-decoration: none;
+    border-radius:10px;
+}
 .menu-line{
     display: inline-block;
     width: 1px;
