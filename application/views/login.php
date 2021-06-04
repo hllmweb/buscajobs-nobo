@@ -31,11 +31,7 @@
                 <div class="menu-featured"><a href="<?= base_url('cadastrar'); ?>">Cadastrar</a></div>
 
                 <?php else: ?>
-                <?php if($lista[0]['opcao'] == 'EMPRESA'): ?>
-                <?= $lista[0]['nm_empresa']; ?>
-                <?php elseif($lista[0]['opcao'] == 'USUARIO'): ?>
-                <?= $lista[0]['nm_usuario']; ?>
-                <?php endif; ?>
+                liberado
                 <?php endif; ?>
 
             </div>
