@@ -56,7 +56,8 @@
 
 
     <!--page-->
-    <div class="page container">
+    <div class="page">
+        <div class="container">
         <p>
             O BuscaJobs é uma website, elaborado pelos acadêmicos: 
             <ul>
@@ -67,7 +68,7 @@
                 <li>Philip Ricardo dos Santos</li>
             </ul>
         </p>
-        
+
         <p>
          Alunos do 8° período do curso de Engenharia da Computação pela Ser Educacional, com a proposta de ser uma solução para pessoas recém-formadas ou que precisam de alguma vaga no mercado de trabalho. 
         </p>
@@ -78,6 +79,7 @@
 
         <p>Com o BuscaJobs, o intuito é justamente deixar claro para as empresas que funcionário eles estão esperando contratar, sem burocracias ou longos processos seletivos e sim a simplicidade e transparência do website .
         </p>
+        </div>
     </div>
 
 
