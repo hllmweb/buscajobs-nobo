@@ -644,7 +644,9 @@ select:focus {
     .width-50:nth-child(2){
         margin-right: 0px;
     }
-
+    .width-25:nth-child(2){
+        padding-right: 0;
+    }
     .width-20{
         margin-top: 20px;
     }
