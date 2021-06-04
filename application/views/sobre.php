@@ -13,7 +13,7 @@
 	<div class="header">
         <div class="container">
             <div class="logo">
-                <a href="">
+                <a href="<?= base_url(''); ?>">
                     <img src="<?= base_url('assets/img/logo.png'); ?>" alt="Logo Buscajobs" />
                 </a>
             </div>
@@ -22,9 +22,9 @@
                 <div class="abrir-menu"><a href="#">MENU</a></div>
                 <div class="menu-main disable">
                 <ul class="menu-list">
-                    <li class="menu-item"><a href="#inicio">Início</a></li>
-                    <li class="menu-item"><a href="#sobre">Sobre</a></li>
-                    <li class="menu-item"><a href="#contato">Contato</a></li>
+                    <li class="menu-item"><a href="<?= base_url(''); ?>">Início</a></li>
+                    <li class="menu-item"><a href="<?= base_url('sobre'); ?>">Sobre</a></li>
+                    <li class="menu-item"><a href="<?= base_url('contato'); ?>">Contato</a></li>
                 </ul>
                 <div class="menu-line"></div>
 
