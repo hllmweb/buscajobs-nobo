@@ -44,7 +44,7 @@ class Cadastrar extends CI_Controller {
 
 		if($add_empresa){
 			echo "<script>alert('Cadastro efetuado com sucesso!'); </script>";
-			 $dados_acesso = $this->acesso->auth(array(
+			$dados_acesso = $this->acesso->auth(array(
                                                 'p_operacao'  => 'CHECK_ACESSO',
                                                 'p_email'     => $email,
                                                 'p_senha'     => $senha,
@@ -56,7 +56,7 @@ class Cadastrar extends CI_Controller {
 
 
             	redirect('inicio', 'refresh');
-        	endif
+        	endif;
      		
 
 			// $data = array(
