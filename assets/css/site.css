@@ -586,6 +586,12 @@ select:focus {
 
 
 @media only screen and (max-width: 970px){
+    .container{
+        width: 100%;
+    }
+    .grid{
+        grid-template-columns: 1fr;
+    }
     .flex-col{
         display: flex;
         flex-flow: column;
