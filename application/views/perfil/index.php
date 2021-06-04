@@ -35,7 +35,7 @@
                
 
                 <?php if($lista[0]['opcao'] == 'EMPRESA'): ?>
-                <div class="menu-acesso-featured"><a href=""><?= $lista[0]['nm_empresa']; ?></a></div>
+                <div class="menu-acesso-featured"><a href=""><?= $lista[0]['id_empresa'].$lista[0]['nm_empresa']; ?></a></div>
                 <div class="menu-acesso-logoff-featured"><a href="<?= base_url('login/sair'); ?>">Sair</a></div>
                 <?php elseif($lista[0]['opcao'] == 'USUARIO'): ?>
                 <div class="menu-acesso-featured"><a href=""><?= $lista[0]['nm_usuario']; ?></a></div>
@@ -63,7 +63,7 @@
                 <span class="font-small-1"><?= $filter_vaga[0]['nm_profissao']; ?> - <?= $filter_vaga[0]['nivel_experiencia']; ?> - <?= $filter_vaga[0]['nm_cidade']; ?></span>
         
                 <?php if($lista !== false && $lista[0]['opcao'] == 'EMPRESA'): ?>
-                <a href="javascript:void(0);" class="btn-subscriber" id="add-inscricao" data-usuario="<?= $filter_vaga[0]['id_usuario'] ?>" data-empresa="5">Inscreva-se</a>
+                <a href="javascript:void(0);" class="btn-subscriber" id="add-inscricao" data-usuario="<?= $filter_vaga[0]['id_usuario'] ?>" data-empresa="5">Tem Interesse?</a>
                 <?php endif; ?>
             </div>
             <div class="page-description">
