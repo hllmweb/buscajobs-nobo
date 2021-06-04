@@ -586,6 +586,7 @@ select:focus {
 
 
 @media only screen and (max-width: 970px){
+    
     .header{
         height: auto;
     }
@@ -594,6 +595,12 @@ select:focus {
     .menu{
         display: block;
         width: 100%;
+        margin: 0;
+        vertical-align: middle;
+    }
+    .menu{
+        float: none;
+        text-align: center;
     }
     .search{
         padding: 20px;
