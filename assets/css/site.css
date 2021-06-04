@@ -611,6 +611,8 @@ select:focus {
     }
     .width-40:nth-child(2){
         margin-right: 0px;
+    }
+    .width-20{
         margin-top: 20px;
     }
 }
