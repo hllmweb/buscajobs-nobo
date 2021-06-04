@@ -646,7 +646,7 @@ select:focus {
         display: block;
     }
     .header-title{
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     .abrir-menu{
         display: block;
@@ -671,10 +671,15 @@ select:focus {
     }
     .menu-item{
         display: block;
-        border-bottom: 1px solid #0B0D36 40%;
+        border-bottom: 1px solid #111;
+    }
+    .menu-item a{
+        width: 100%;
+        display: block;
+        padding: 20px 0;
     }
     .menu-item:first-child{
-       border-top: 1px solid #0B0D36 40%;
+       border-top: 1px solid #111;
     }
     .menu-item:last-child{
         border-bottom:none;
