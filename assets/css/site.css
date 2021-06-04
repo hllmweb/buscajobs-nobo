@@ -672,12 +672,21 @@ select:focus {
     .menu-item{
         display: block;
         margin: 25px 0;
+        border-bottom: 1px solid #0B0D36 40%;
+    }
+    .menu-item:last-child{
+        border-bottom:none;
     }
     .menu-featured{
         display: block;
         width: 100%;
         margin-left: 0px;
         margin: 5px 0;
+        padding: 20px 0;
+    }
+    .menu-featured a{
+        width: 100%;
+        display: block;
     }
 
 }
