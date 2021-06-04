@@ -60,7 +60,7 @@
         <div class="container">
         <p>
             O BuscaJobs é uma website, elaborado pelos acadêmicos: 
-            <ul>
+            <ul class="page-list">
                 <li>Acácio Cortinhas Leal</li>
                 <li>Ajay Ramchandani</li> 
                 <li>Hugo Luis Lima Mesquita</li>

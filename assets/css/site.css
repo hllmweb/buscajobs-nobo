@@ -407,12 +407,12 @@ html, body{
     font-size: 1rem;
     margin-bottom: 10px;
 }
-.page p ul{
+.page-list{
     list-style-type: circle;
-}
-.page p ul li{
-    display: block;
     font-size: 1rem;
+}
+.page-list li{
+    display: block;
 }
 .page-container{
     padding-top: 15px;
