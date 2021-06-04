@@ -91,7 +91,7 @@
                         usuario: usuario
                     },
                     beforeSend: function(){
-                        $(this).html('Solicitado Enviada!');
+                        $("#add-inscricao").html('Solicitado Enviada!');
                     },
                     success: function(data){
                         if(data == "existe"){
