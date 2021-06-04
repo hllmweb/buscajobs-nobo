@@ -674,6 +674,9 @@ select:focus {
         margin: 25px 0;
         border-bottom: 1px solid #0B0D36 40%;
     }
+    .menu-item:first-child{
+       border-top: 1px solid #0B0D36 40%;
+    }
     .menu-item:last-child{
         border-bottom:none;
     }
@@ -681,12 +684,12 @@ select:focus {
         display: block;
         width: 100%;
         margin-left: 0px;
-        margin: 5px 0;
-        padding: 20px 0;
+        /*margin: 5px 0;*/
     }
     .menu-featured a{
         width: 100%;
         display: block;
+        padding: 20px 0;
     }
 
 }
