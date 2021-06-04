@@ -32,6 +32,7 @@ class Login extends CI_Controller {
 		
 		$data = array(
 					'titulo' 		=> 'Login - BuscaJobs',
+					'lista'			=> $this->permissoes->init_permissao($this->session->userdata('log_hash_acesso'))
 				);
 
 

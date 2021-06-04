@@ -29,6 +29,9 @@ class Permissoes {
         $this->CI =& get_instance();
         
         $params = array(
+            'p_operacao'    => 'CHECK_PERMISSAO',
+            'p_email'       => null,
+            'p_senha'       => null,
             'p_hash_acesso' => $hash_acesso
         );
 
@@ -38,7 +41,7 @@ class Permissoes {
         else:
             $this->CI->session->set_userdata('mensagem',$dados_acesso[0]["mensagem"]);
      
-            redirect('dashboard/sempermissao','refresh');
+            redirect('login','refresh');
         endif;
     }
 
