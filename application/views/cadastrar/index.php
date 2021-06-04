@@ -20,6 +20,7 @@
 
             <div class="menu">
                 <div class="abrir-menu"><a href="#">MENU</a></div>
+                <div class="menu-main">
                 <ul class="menu-list">
                     <li class="menu-item"><a href="#inicio">Início</a></li>
                     <li class="menu-item"><a href="#sobre">Sobre</a></li>
@@ -42,6 +43,7 @@
                 <?php endif; ?>
 
                 <?php endif; ?>
+                </div>
             </div>
 	        <div class="header-group">
 	        <h2 class="header-title">Cadastre-se e encontre os melhores profissionais</h2>
