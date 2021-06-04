@@ -71,8 +71,8 @@ class Cadastrar extends CI_Controller {
 	#usuario
 	public function usuario(){
 		$nm_usuario 			= $this->input->get_post('nm_usuario');
-		$email 					= $this->input->get_post('email_empresa');
-		$senha 					= $this->input->get_post('senha_empresa');
+		$email 					= $this->input->get_post('email_usuario');
+		$senha 					= $this->input->get_post('senha_usuario');
 		$id_cidade 				= $this->input->get_post('cidade');
 		$id_profissao   		= $this->input->get_post('profissao');
 		$desc_usuario   		= $this->input->get_post('desc_usuario');
