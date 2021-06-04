@@ -597,10 +597,11 @@ select:focus {
         width: 100%;
         margin: 0;
         vertical-align: middle;
+        text-align: center;
     }
     .menu{
         float: none;
-        text-align: center;
+       
     }
     .search{
         padding: 20px;
@@ -608,7 +609,6 @@ select:focus {
     .grid{
         grid-template-columns: 1fr;
         padding: 20px;
-        grip-gap: 10px;
     }
     .flex-col{
         display: flex;
@@ -630,5 +630,7 @@ select:focus {
     .width-20{
         margin-top: 20px;
     }
-
+    .cards > .item{
+        margin-bottom: 10px;
+    }
 }
