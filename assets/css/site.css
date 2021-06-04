@@ -407,6 +407,13 @@ html, body{
     font-size: 1rem;
     margin-bottom: 10px;
 }
+.page p ul{
+    list-style-type: circle;
+}
+.page p ul li{
+    display: block;
+    font-size: 1rem;
+}
 .page-container{
     padding-top: 15px;
     margin-bottom: 40px;
