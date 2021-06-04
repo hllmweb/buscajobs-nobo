@@ -621,7 +621,8 @@ select:focus {
         grid-template-columns: 1fr;
         padding: 20px;
     }
-    .flex-col{
+    .flex-col,
+    .flex{
         display: flex;
         flex-flow: column;
     }
@@ -632,12 +633,18 @@ select:focus {
         display: block;
         width: 100%;
     }
-    .width-40:nth-child(1){
+    .width-50{
+        margin-bottom: 20px;
+    }
+    .width-40:nth-child(1),
+    .width-50:nth-child(1){
         margin-right: 0px;
     }
-    .width-40:nth-child(2){
+    .width-40:nth-child(2),
+    .width-50:nth-child(2){
         margin-right: 0px;
     }
+
     .width-20{
         margin-top: 20px;
     }
