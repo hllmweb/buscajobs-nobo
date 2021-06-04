@@ -51,14 +51,14 @@ class Cadastrar extends CI_Controller {
                                                 'p_senha'     => $senha,
                                                 'p_hash_acesso' => null       
                                             ));
-     		print_r($dados_acesso);
+     		 redirect('inicio', 'refresh');
 
-			$data = array(
-			 	'titulo' => 'BuscaJobs - Encontre os melhores profissionais',
-			 	'lista'  =>  $this->permissoes->init_session() //$this->permissoes->init_permissao($dados_acesso[0]['hash_acesso'])
-			);
+			// $data = array(
+			//  	'titulo' => 'BuscaJobs - Encontre os melhores profissionais',
+			//  	'lista'  =>  $this->permissoes->init_session() //$this->permissoes->init_permissao($dados_acesso[0]['hash_acesso'])
+			// );
 
-			$this->load->view('inicio/index', $data);
+			// $this->load->view('inicio/index', $data);
 
 		}else{
 			echo "<script>alert('Erro ao efetuar cadastro!');</script>";
