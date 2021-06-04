@@ -217,7 +217,7 @@ html, body{
 .grid{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 25px;
+    grid-gap: 15px;
 }
 .flex{
     display: flex;
