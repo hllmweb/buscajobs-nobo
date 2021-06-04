@@ -35,7 +35,6 @@ class Acesso extends CI_Controller {
             $this->session->set_userdata('log_hash_acesso',$dados_acesso[0]['hash_acesso']);
 
 
-            print_r($dados_acesso[0]['hash_acesso']);
             // $data = array(
             //     'titulo'      => 'Login - BuscaJobs',
             //     'lista'       => $this->permissoes->init_permissao($dados_acesso[0]['hash_acesso'])
@@ -50,10 +49,18 @@ class Acesso extends CI_Controller {
             // );
             //$this->load->view('login',$data);
 
-            //redirect('login', 'refresh');
-        // else:
+            redirect('login', 'refresh');
+        else:
             //$this->permissoes->init_session(), // nao existe
             //redirect('login','refresh');
+
+
+            $data = array(
+                'titulo'    => 'Login - BuscaJobs',
+                'lista'     => $this->permissoes->init_session()
+                //'mensagem'  => $dados_acesso[0]["mensagem"]
+            );
+            $this->load->view('login',$data);
         endif;
 
             
