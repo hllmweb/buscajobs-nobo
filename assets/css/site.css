@@ -391,15 +391,14 @@ html, body{
     float: right;
     font-style: normal;
     font-weight: bold;
-    padding: 15px;
+    padding: 5px 10px;
     text-decoration: none;
     border-radius: 10px;
     font-family: 'Roboto', sans-serif;
     position: relative;
     top: -55px;
 }
-.btn-subscriber:hover,
-.btn-subscriber:focus{
+.btn-subscriber:hover{
     background-color: #68BF10 40%;
 }
 .page p{
