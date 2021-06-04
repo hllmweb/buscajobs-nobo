@@ -118,7 +118,7 @@
                     </div>
                     <div class="input-container width-25 inline">
                         <div class="select">
-                            <select name="cidade" class="select-text" required>
+                            <select name="cidade" id="cidade" class="select-text" required>
                                 <option value="" selected=""></option>
                                 <option value="Manaus">Manaus</option> 
                                 <option value="Rio de Janeiro">Rio de Janeiro</option> 
@@ -130,14 +130,14 @@
                     </div>
                     <div class="input-container width-25 inline">
                         <div class="select">
-                            <select name="vaga" class="select-text" required>
+                            <select name="profissao" id="profissao" class="select-text" required>
                                 <option value="" selected=""></option>
                                 <option value="Programador PHP">Programador PHP</option> 
                                 <option value="Editor de Vídeo">Editor de Vídeo</option> 
                             </select>
                             <span class="select-highlight"></span>
                             <span class="select-bar"></span>
-                            <label for="vaga" class="select-label">Selecione a Vaga</label>
+                            <label for="profissao" class="select-label">Selecione a Vaga</label>
                         </div>  
                     </div>    
                 </div>
@@ -147,12 +147,12 @@
             <div class="row block margin-bottom">
                 <div class="flex">
                     <div class="input-container width-50 inline">
-                        <input id="email" name="email"  class="input" type="text" autocomplete="off" pattern=".+" required />
-                        <label class="label" for="email">E-Mail</label>
+                        <input id="email_usuario" name="email_usuario"  class="input" type="text" autocomplete="off" pattern=".+" required />
+                        <label class="label" for="email_usuario">E-Mail</label>
                     </div>
                     <div class="input-container width-50 inline">
-                        <input id="senha" name="senha"  class="input" type="password" autocomplete="off" pattern=".+" required />
-                        <label class="label" for="senha">Senha</label>
+                        <input id="senha_usuario" name="senha_usuario"  class="input" type="password" autocomplete="off" pattern=".+" required />
+                        <label class="label" for="senha_usuario">Senha</label>
                     </div>                   
                 </div>
             </div>
@@ -162,7 +162,7 @@
                 <div class="flex">
                     <div class="input-container width-50 inline">
                         <div class="select">
-                            <select name="nivel_experiencia" class="select-text" required>
+                            <select name="nivel_experiencia" id="nivel_experiencia" class="select-text" required>
                                 <option value="" selected=""></option>
                                 <option value="Básico">Básico</option> 
                                 <option value="Intermédiario">Intermédiario</option> 
@@ -175,8 +175,8 @@
                     </div>
 
                     <div class="input-container width-50 inline">
-                        <input id="desc" name="desc"  class="input" pattern=".+" required />
-                        <label class="label" for="desc">Descrição</label>
+                        <input id="desc_usuario" name="desc_usuario"  class="input" pattern=".+" required />
+                        <label class="label" for="desc_usuario">Descrição</label>
                     </div>                   
                 </div>
             </div>

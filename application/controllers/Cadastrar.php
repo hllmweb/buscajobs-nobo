@@ -26,6 +26,7 @@ class Cadastrar extends CI_Controller {
 		$this->load->view('cadastrar/index', $data);
 	}
 
+	#empresa
 	public function empresa(){
 		$nm_empresa = $this->input->get_post('nm_empresa');
 		$email 		= $this->input->get_post('email_empresa');
@@ -59,19 +60,50 @@ class Cadastrar extends CI_Controller {
         	endif;
      		
 
-			// $data = array(
-			//  	'titulo' => 'BuscaJobs - Encontre os melhores profissionais',
-			//  	'lista'  =>  $this->permissoes->init_session() //$this->permissoes->init_permissao($dados_acesso[0]['hash_acesso'])
-			// );
+		}else{
+			echo "<script>alert('Erro ao efetuar cadastro!');</script>";
+		}
 
-			// $this->load->view('inicio/index', $data);
+	}
+
+
+
+	#usuario
+	public function usuario(){
+
+
+		$add_usuario = $this->cadastro->sp_cadastro(array(
+												'p_operacao' 			=> 'ADD_USUARIO',
+												'p_nm_empresa' 			=> null,
+												'p_email'				=> $email,
+												'p_senha'				=> $senha,
+												'p_id_cidade'			=> $id_cidade,
+												'p_id_profissao'		=> $id_profissao,
+												'p_nm_usuario'			=> $nm_usuario,
+												'p_desc_usuario'    	=> $desc_usuario,
+												'p_nivel_experiencia'  	=> $nivel_experiencia)); 
+
+		if($add_usuario){
+			echo "<script>alert('Cadastro efetuado com sucesso!'); </script>";
+			$dados_acesso = $this->acesso->auth(array(
+                                                'p_operacao'  => 'CHECK_ACESSO',
+                                                'p_email'     => $email,
+                                                'p_senha'     => $senha,
+                                                'p_hash_acesso' => null       
+                                            ));
+			
+			if(!isset($dados_acesso[0]["mensagem"])):
+            	$this->session->set_userdata('log_hash_acesso',$dados_acesso[0]['hash_acesso']);
+
+
+            	redirect('inicio', 'refresh');
+        	endif;
+     		
 
 		}else{
 			echo "<script>alert('Erro ao efetuar cadastro!');</script>";
 		}
 
-
 	}
-
 
 }
