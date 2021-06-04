@@ -731,7 +731,7 @@ select:focus {
         width: 100%;
         margin:0px;
         display: block;
-        paddiing: 0;
+        paddiing:0px 0px;
         vertical-align: middle;
     }
     .responsive{
@@ -739,6 +739,10 @@ select:focus {
         font-size: 0.9rem;
         color: #0B0D36;
         font-weight: 700;
+        vertical-align: middle;
+    }
+    .btn-more svg{
+        display: inline-block;
         vertical-align: middle;
     }
 }
