@@ -25,12 +25,12 @@ $(".abrir-menu").click(function(e){
 
 	if($(".menu ul").hasClass('aberto')){
 		$(".abrir-menu a").html("FECHAR MENU");
-		$(".main-menu").removeClass('disable');
-		$(".main-menu").addClass('enable');
+		$(".menu-main").removeClass('disable');
+		$(".menu-main").addClass('enable');
 	}else{
 		$(".abrir-menu a").html("ABRIR MENU");
-		$(".main-menu").addClass('disable');
-		$(".main-menu").removeClass('enable');
+		$(".menu-main").addClass('disable');
+		$(".menu-main").removeClass('enable');
 	}
 
 	$(".menu ul li").each(function(i, e){
