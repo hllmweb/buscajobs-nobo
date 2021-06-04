@@ -645,6 +645,9 @@ select:focus {
         margin-bottom: 0px;
         display: block;
     }
+    .header-title{
+        font-size: 1rem;
+    }
     .abrir-menu{
         display: block;
     }
@@ -669,6 +672,12 @@ select:focus {
     .menu-item{
         display: block;
         margin: 25px 0;
+    }
+    .menu-featured{
+        display: block;
+        width: 100%;
+        margin-left: 0px;
+        margin: 5px 0;
     }
 
 }
